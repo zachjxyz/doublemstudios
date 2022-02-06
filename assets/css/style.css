@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Top Bar
 --------------------------------------------------------------*/
-#topbar {
+/* #topbar {
   height: 40px;
   font-size: 14px;
   transition: all 0.5s;
@@ -154,7 +154,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: 10px;
   color: rgba(255, 255, 255, 0.5);
   content: "/";
-}
+} */
 
 /*--------------------------------------------------------------
 # Header
@@ -165,7 +165,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
-  top: 40px;
+  /* top: 40px; */
 }
 #header.header-scrolled {
   top: 0;
@@ -192,7 +192,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Book a table button Menu
 --------------------------------------------------------------*/
-.book-a-table-btn {
+.book-a-session-btn {
   margin: 0 0 0 15px;
   border: 2px solid #cda45e;
   color: #fff;
@@ -204,12 +204,12 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 1px;
   transition: 0.3s;
 }
-.book-a-table-btn:hover {
+.book-a-session-btn:hover {
   background: #cda45e;
   color: #fff;
 }
 @media (max-width: 992px) {
-  .book-a-table-btn {
+  .book-a-session-btn {
     margin: 0 15px 0 0;
     padding: 8px 20px;
   }
@@ -399,7 +399,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top center;
+  background: url("../img/hero-bg.gif") top center;
   background-size: cover;
   position: relative;
   padding: 0;
@@ -625,7 +625,7 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 15px 0;
-  background: #1d1b16;
+  background: #454035;
   margin-top: 110px;
 }
 @media (max-width: 992px) {
@@ -701,8 +701,8 @@ section {
   height: 60px;
   z-index: 1;
   content: "";
-  border-left: 5px solid #cda45e;
-  border-top: 5px solid #cda45e;
+  border-left: 5px solid #fff;
+  border-top: 5px solid #fff;
   transition: 0.5s;
 }
 .about .about-img::after {
@@ -713,8 +713,8 @@ section {
   height: 60px;
   z-index: 2;
   content: "";
-  border-right: 5px solid #cda45e;
-  border-bottom: 5px solid #cda45e;
+  border-right: 5px solid #fff;
+  border-bottom: 5px solid #fff;
   transition: 0.5s;
 }
 .about .about-img:hover {
@@ -927,14 +927,14 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Events
+# services
 --------------------------------------------------------------*/
-.events {
-  background: url(../img/events-bg.jpg) center center no-repeat;
+.services {
+  background: url(../img/services-bg.jpg) center center no-repeat;
   background-size: cover;
   position: relative;
 }
-.events::before {
+.services::before {
   content: "";
   background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
@@ -943,84 +943,84 @@ section {
   left: 0;
   bottom: 0;
 }
-.events .section-title h2 {
+.services .section-title h2 {
   color: #fff;
 }
-.events .container {
+.services .container {
   position: relative;
 }
 @media (min-width: 1024px) {
-  .events {
+  .services {
     background-attachment: fixed;
   }
 }
-.events .events-carousel {
+.services .services-carousel {
   background: rgba(255, 255, 255, 0.08);
   padding: 30px;
 }
-.events .event-item {
+.services .event-item {
   color: #fff;
 }
-.events .event-item h3 {
+.services .event-item h3 {
   font-weight: 600;
   font-size: 26px;
   color: #cda45e;
 }
-.events .event-item .price {
+.services .event-item .price {
   font-size: 26px;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   margin-bottom: 15px;
 }
-.events .event-item .price span {
+.services .event-item .price span {
   border-bottom: 2px solid #cda45e;
 }
-.events .event-item ul {
+.services .event-item ul {
   list-style: none;
   padding: 0;
 }
-.events .event-item ul li {
+.services .event-item ul li {
   padding-bottom: 10px;
 }
-.events .event-item ul i {
+.services .event-item ul i {
   font-size: 20px;
   padding-right: 4px;
   color: #cda45e;
 }
-.events .event-item p:last-child {
+.services .event-item p:last-child {
   margin-bottom: 0;
 }
-.events .swiper-pagination {
+.services .swiper-pagination {
   margin-top: 30px;
   position: relative;
 }
-.events .swiper-pagination .swiper-pagination-bullet {
+.services .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: rgba(255, 255, 255, 0.4);
   opacity: 1;
 }
-.events .swiper-pagination .swiper-pagination-bullet-active {
+.services .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #cda45e;
 }
 
 /*--------------------------------------------------------------
 # Book A Table
 --------------------------------------------------------------*/
-.book-a-table .php-email-form {
+.book-a-service .php-email-form {
   width: 100%;
 }
-.book-a-table .php-email-form .form-group {
+.book-a-service .php-email-form .form-group {
   padding-bottom: 8px;
 }
-.book-a-table .php-email-form .validate {
+.book-a-service .php-email-form .validate {
   display: none;
   color: red;
   margin: 0 0 15px 0;
   font-weight: 400;
   font-size: 13px;
 }
-.book-a-table .php-email-form .error-message {
+.book-a-service .php-email-form .error-message {
   display: none;
   color: #fff;
   background: #ed3c0d;
@@ -1028,10 +1028,10 @@ section {
   padding: 15px;
   font-weight: 600;
 }
-.book-a-table .php-email-form .error-message br + br {
+.book-a-service .php-email-form .error-message br + br {
   margin-top: 25px;
 }
-.book-a-table .php-email-form .sent-message {
+.book-a-service .php-email-form .sent-message {
   display: none;
   color: #fff;
   background: #18d26e;
@@ -1039,12 +1039,12 @@ section {
   padding: 15px;
   font-weight: 600;
 }
-.book-a-table .php-email-form .loading {
+.book-a-service .php-email-form .loading {
   display: none;
   text-align: center;
   padding: 15px;
 }
-.book-a-table .php-email-form .loading:before {
+.book-a-service .php-email-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1056,7 +1056,7 @@ section {
   -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
 }
-.book-a-table .php-email-form input, .book-a-table .php-email-form textarea {
+.book-a-service .php-email-form input, .book-a-service .php-email-form textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
@@ -1064,22 +1064,22 @@ section {
   border-color: #625b4b;
   color: white;
 }
-.book-a-table .php-email-form input::-moz-placeholder, .book-a-table .php-email-form textarea::-moz-placeholder {
+.book-a-service .php-email-form input::-moz-placeholder, .book-a-service .php-email-form textarea::-moz-placeholder {
   color: #a49b89;
 }
-.book-a-table .php-email-form input::placeholder, .book-a-table .php-email-form textarea::placeholder {
+.book-a-service .php-email-form input::placeholder, .book-a-service .php-email-form textarea::placeholder {
   color: #a49b89;
 }
-.book-a-table .php-email-form input:focus, .book-a-table .php-email-form textarea:focus {
+.book-a-service .php-email-form input:focus, .book-a-service .php-email-form textarea:focus {
   border-color: #cda45e;
 }
-.book-a-table .php-email-form input {
+.book-a-service .php-email-form input {
   height: 44px;
 }
-.book-a-table .php-email-form textarea {
+.book-a-service .php-email-form textarea {
   padding: 10px 12px;
 }
-.book-a-table .php-email-form button[type=submit] {
+.book-a-service .php-email-form button[type=submit] {
   background: #cda45e;
   border: 0;
   padding: 10px 35px;
@@ -1087,7 +1087,7 @@ section {
   transition: 0.4s;
   border-radius: 50px;
 }
-.book-a-table .php-email-form button[type=submit]:hover {
+.book-a-service .php-email-form button[type=submit]:hover {
   background: #d3af71;
 }
 
@@ -1164,8 +1164,10 @@ section {
 --------------------------------------------------------------*/
 .gallery .gallery-item {
   overflow: hidden;
+  border-top: 3px solid #454035;
   border-right: 3px solid #454035;
   border-bottom: 3px solid #454035;
+  border-left: 3px solid #454035;
 }
 .gallery .gallery-item img {
   transition: all ease-in-out 0.4s;
@@ -1175,16 +1177,16 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Chefs
+# Team
 --------------------------------------------------------------*/
-.chefs .member {
+.team .member {
   text-align: center;
   margin-bottom: 20px;
   background: #343a40;
   position: relative;
   overflow: hidden;
 }
-.chefs .member .member-info {
+.team .member .member-info {
   opacity: 0;
   position: absolute;
   bottom: 0;
@@ -1193,26 +1195,26 @@ section {
   right: 0;
   transition: 0.2s;
 }
-.chefs .member .member-info-content {
+.team .member .member-info-content {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 10px;
   transition: bottom 0.4s;
 }
-.chefs .member .member-info-content h4 {
+.team .member .member-info-content h4 {
   font-weight: 700;
   margin-bottom: 2px;
   font-size: 18px;
   color: #fff;
 }
-.chefs .member .member-info-content span {
+.team .member .member-info-content span {
   font-style: italic;
   display: block;
   font-size: 13px;
   color: #fff;
 }
-.chefs .member .social {
+.team .member .social {
   position: absolute;
   left: 0;
   bottom: -38px;
@@ -1221,29 +1223,29 @@ section {
   transition: bottom ease-in-out 0.4s;
   text-align: center;
 }
-.chefs .member .social a {
+.team .member .social a {
   transition: color 0.3s;
   color: #fff;
   margin: 0 10px;
   display: inline-block;
 }
-.chefs .member .social a:hover {
+.team .member .social a:hover {
   color: #cda45e;
 }
-.chefs .member .social i {
+.team .member .social i {
   font-size: 18px;
   margin: 0 2px;
 }
-.chefs .member:hover .member-info {
+.team .member:hover .member-info {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 212, 255, 0) 100%);
   opacity: 1;
   transition: 0.4s;
 }
-.chefs .member:hover .member-info-content {
+.team .member:hover .member-info-content {
   bottom: 60px;
   transition: bottom 0.4s;
 }
-.chefs .member:hover .social {
+.team .member:hover .social {
   bottom: 0;
   transition: bottom ease-in-out 0.4s;
 }
