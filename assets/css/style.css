@@ -701,8 +701,8 @@ section {
   height: 60px;
   z-index: 1;
   content: "";
-  border-left: 5px solid #fff;
-  border-top: 5px solid #fff;
+  border-left: 5px solid #f8c729;
+  border-top: 5px solid #f8c729;
   transition: 0.5s;
 }
 .about .about-img::after {
@@ -713,8 +713,8 @@ section {
   height: 60px;
   z-index: 2;
   content: "";
-  border-right: 5px solid #fff;
-  border-bottom: 5px solid #fff;
+  border-right: 5px solid #f8c729;
+  border-bottom: 5px solid #f8c729;
   transition: 0.5s;
 }
 .about .about-img:hover {
