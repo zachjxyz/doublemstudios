@@ -192,7 +192,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Book a table button Menu
 --------------------------------------------------------------*/
-.book-a-session-btn {
+.book {
   margin: 0 0 0 15px;
   border: 2px solid #f8c729;
   color: #fff;
@@ -204,12 +204,12 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 1px;
   transition: 0.3s;
 }
-.book-a-session-btn:hover {
+.book:hover {
   background: #f8c729;
   color: #fff;
 }
 @media (max-width: 992px) {
-  .book-a-session-btn {
+  .book {
     margin: 0 15px 0 0;
     padding: 8px 20px;
   }
@@ -440,7 +440,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero .btns {
   margin-top: 30px;
 }
-#hero .btn-menu, #hero .btn-book {
+#hero .btn-menu, #hero .book {
   font-weight: 600;
   font-size: 13px;
   letter-spacing: 0.5px;
@@ -453,11 +453,11 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   border: 2px solid #f8c729;
 }
-#hero .btn-menu:hover, #hero .btn-book:hover {
+#hero .btn-menu:hover, #hero .book:hover {
   background: #f8c729;
   color: #fff;
 }
-#hero .btn-book {
+#hero .book {
   margin-left: 15px;
 }
 #hero .play-btn {
