@@ -205,7 +205,6 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
 }
 .book:hover {
-  /* background: #f8c729; */
   color: #fff;
 }
 @media (max-width: 992px) {
