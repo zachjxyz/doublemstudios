@@ -39,6 +39,10 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 100%;
 }
 
+.card-img-top{
+  max-width: 450px;
+}
+
 .zone {
   justify-content: center;
   cursor:pointer;
@@ -94,8 +98,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .typeform {
-  display: flex;
-  align-items: center;
   margin-bottom: 25px;
 }
 
