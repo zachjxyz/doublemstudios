@@ -47,10 +47,10 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #1a1814;
-  border-top-color: #f8c729;
-  border-bottom-color: #f8c729;
-  border-radius: 50%;
+  /* border: 6px solid #1a1814; */
+  /* border-top-color: #f8c729; */
+  /* border-bottom-color: #f8c729; */
+  /* border-radius: 50%; */
   width: 60px;
   height: 60px;
   -webkit-animation: animate-preloader 1s linear infinite;
@@ -193,7 +193,7 @@ h1, h2, h3, h4, h5, h6 {
 # Book a table button Menu
 --------------------------------------------------------------*/
 .book {
-  margin: 0 0 0 15px;
+  /* margin: 0 0 0 15px; */
   border: 2px solid #f8c729;
   color: #fff;
   border-radius: 50px;
@@ -209,9 +209,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 992px) {
   .book {
-    margin: 0 15px 0 0;
-    padding: 8px 20px;
+    /* margin: 0 15px 0 0; */
+    /* padding: 8px 20px; */
   }
+}
+
+.acuity-booking {
+  border: none;
 }
 
 /*--------------------------------------------------------------
@@ -349,7 +353,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 15px;
   left: 15px;
   padding: 10px 0;
-  border-radius: 6px;
+  /* border-radius: 6px; */
   background-color: #fff;
   overflow-y: auto;
   transition: 0.3s;
@@ -487,16 +491,16 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   width: 120px;
   height: 120px;
-  -webkit-animation-delay: 0s;
-  animation-delay: 0s;
-  -webkit-animation: pulsate-btn 2s;
-  animation: pulsate-btn 2s;
-  -webkit-animation-direction: forwards;
-  animation-direction: forwards;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: steps;
-  animation-timing-function: steps;
+  /* -webkit-animation-delay: 0s; */
+  /* animation-delay: 0s; */
+  /* -webkit-animation: pulsate-btn 2s; */
+  /* animation: pulsate-btn 2s; */
+  /* -webkit-animation-direction: forwards; */
+  /* animation-direction: forwards; */
+  /* -webkit-animation-iteration-count: infinite; */
+  /* animation-iteration-count: infinite; */
+  /* -webkit-animation-timing-function: steps; */
+  /* animation-timing-function: steps; */
   opacity: 1;
   border-radius: 50%;
   border: 5px solid rgba(205, 164, 94, 0.7);
@@ -589,14 +593,14 @@ section {
 }
 
 .section-title {
-  padding-bottom: 40px;
+  /* padding-bottom: 10px; */
 }
 .section-title h2 {
   font-size: 14px;
   font-weight: 500;
   padding: 0;
   line-height: 1px;
-  margin: 0 0 5px 0;
+  /* margin: 0 0 5px 0; */
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #aaaaaa;
@@ -676,7 +680,7 @@ section {
 }
 .about:before {
   content: "";
-  background: rgba(0, 0, 0, 0.8);
+  background: white(0, 0, 0, 0.8);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -903,8 +907,8 @@ section {
   border-color: #f8c729;
 }
 .specials .tab-pane.active {
-  -webkit-animation: fadeIn 0.5s ease-out;
-  animation: fadeIn 0.5s ease-out;
+  /* -webkit-animation: fadeIn 0.5s ease-out; */
+  /* animation: fadeIn 0.5s ease-out; */
 }
 .specials .details h3 {
   font-size: 26px;
@@ -1052,8 +1056,8 @@ section {
   margin: 0 10px -6px 0;
   border: 3px solid #f8c729;
   border-top-color: #1a1814;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
+  /* -webkit-animation: animate-loading 1s linear infinite; */
+  /* animation: animate-loading 1s linear infinite; */
 }
 .book-a-service .php-email-form input, .book-a-service .php-email-form textarea {
   border-radius: 0;
@@ -1326,8 +1330,8 @@ section {
   margin: 0 10px -6px 0;
   border: 3px solid #f8c729;
   border-top-color: #1a1814;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
+  /* -webkit-animation: animate-loading 1s linear infinite; */
+  /* animation: animate-loading 1s linear infinite; */
 }
 .contact .php-email-form input, .contact .php-email-form textarea {
   border-radius: 0;
