@@ -17,84 +17,371 @@
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
-    <h1 style="text-align:center;">Packages</h1>
+    <h1 style="text-align:center;margin-top: 5vh;">Packages</h1>
     <p class="card-subtext" style="text-align:center;margin-top: 15px;">We go live January 1st, 2023.</p>
-
-    <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-    <stripe-pricing-table pricing-table-id="prctbl_1LTutJLtl7uMv2C0STZN0yyH"
-    publishable-key="pk_live_51HzPKpLtl7uMv2C0FfkeNxdt9TGRY9AtWknusEjxgvNi4X4EjPRN7b3bPo13VWycfx1uYqulnLnUHrJ28q9LGTAa00QRmabTBQ">
-    </stripe-pricing-table>
-
    <!-- Packages -->
-   <!-- <section id="packages" class="container-fluid"> -->
-        <!-- Project Grid-->
-        <!-- <div class="zone grid-wrapper"> -->
+    <div>
+        <div class="pricing-table flex-container direction-column justify-content-center align-items-center">
+            <div class="pricing-table-grid">
+    
+                <!-- Add items to grid-->
+                <div class="price-column flex-container direction-column justify-content-center align-items-center">
+                    <!-- Top half of pricing table-->
+                    <div class="price-column-content flex-container direction-column justify-content-center align-items-center">
+                        <!-- Name and subtext of product-->
+                        <div class="price-column-about-the-product flex-container direction-column">
+                            <div class="price-column-text-and-image flex-container">
+                                <div class="price-column-text-container-height-aligner">
+                                    <div class="price-column-text-container flex-container direction-column">
+                                        <div class="price-column-name flex-container">
+                                            <span class="price-column-name-text">The Hobbist</span>
+                                        </div>
+                                        <span class="price-column-description">
+                                            If you're just getting started and need a consistent place to call home, this tier is for you. You get full access to many of our resources.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Price and button of product -->
+                        <div class="price-and-button">
+                            <div class="price-column-price-container-height-aligner" style="height: 42px;">
+                                <div class="price-column-price-container">
+                                    <!-- Price -->
+                                    <div class="flex-container align-items-center">
+                                        <span class="price-column-price-text">
+                                            <span>$275</span>
+                                        </span>
 
-            <!-- Option 1 -->
-            <!-- <div class="box zone">
-                <div class="card">
-                    <img src="./assets/img/hobbist.svg" class="card-img-top" alt="logo">
-                    <div class="card-body">
-                        <h1 class="card-title">$500/year</h1>
-                        <h3 class="card-subtext">If you're just getting started and need a consistent place to call home, this tier is for you.</h3>
-                        <p class="card-text">
-                            <i class="bi bi-check-circle-fill"> Up to 4 hours per month</i><br>
-                            <i class="bi bi-check-circle-fill"> Access to Co-working Space</i><br>
-                            <i class="bi bi-check-circle-fill"> Access to Artist Strategy Club</i><br>
-                            <i class="bi bi-check-circle-fill"> Access to Business Growth Club</i><br>
-                            <i class="bi bi-check-circle-fill"> Access to the Production Space</i><br>
-                            <i class="bi bi-check-circle-fill"> Access to the Podcast Room</i><br>
-                            <i class="bi bi-check-circle-fill"> Access to our Knowledge Center</i><br>
-                            <i class="bi bi-check-circle-fill"> Post gigs in the Marketplace</i><br>
-                            <i class="bi bi-check-circle-fill"> 1000+ Community Discovery</i><br>
-                        </p>
-                      </div>
+                                        <!-- Interval -->
+                                        <span class="price-column-interval-text">
+                                            <span>every 6</span>
+                                            <br>
+                                            <span>months</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+
+                    <hr class="price-hr">
+    
+                    <!-- Bottom half of pricing table-->
+                    <div class="price-column-featured flex-container direction-column">
+                        <span class="price-column-feature-list-header" style="font-size: 14px;">This includes:</span>
+                        <div class="price-column-feature-list flex-container direction-column align-items-flex-start">
+                            <!-- Add items by copying and pasting code below -->
+                            <div class="price-column-feature flex-container align-items-flex-start">
+                                <!-- Bootstrap check icon -->
+                                <div class="price-column-check-container flex-container">
+                                    <i class="bi bi-check-circle-fill" focusable="false" style="color:white;opacity:0.7;height:16px;width:16px;" viewbox="0 0 16 16"></i>
+                                </div>
+                                <!-- Product Description -->
+                                <span class="price-column-feature-text" style="font-size:14px">Up to 4 hours per month</span>
+                            </div>
+                            <div class="price-column-feature flex-container align-items-flex-start">
+                                <!-- Bootstrap check icon -->
+                                <div class="price-column-check-container flex-container">
+                                    <i class="bi bi-check-circle-fill" focusable="false" style="color:white;opacity:0.7;height:16px;width:16px;" viewbox="0 0 16 16"></i>
+                                </div>
+                                <!-- Product Description -->
+                                <span class="price-column-feature-text" style="font-size:14px">Access to Co-working Space</span>
+                            </div>
+                            <div class="price-column-feature flex-container align-items-flex-start">
+                                <!-- Bootstrap check icon -->
+                                <div class="price-column-check-container flex-container">
+                                    <i class="bi bi-check-circle-fill" focusable="false" style="color:white;opacity:0.7;height:16px;width:16px;" viewbox="0 0 16 16"></i>
+                                </div>
+                                <!-- Product Description -->
+                                <span class="price-column-feature-text" style="font-size:14px">Access to Artist Strategy Clubs</span>
+                            </div>
+                            <div class="price-column-feature flex-container align-items-flex-start">
+                                <!-- Bootstrap check icon -->
+                                <div class="price-column-check-container flex-container">
+                                    <i class="bi bi-check-circle-fill" focusable="false" style="color:white;opacity:0.7;height:16px;width:16px;" viewbox="0 0 16 16"></i>
+                                </div>
+                                <!-- Product Description -->
+                                <span class="price-column-feature-text" style="font-size:14px">Access to Business Growth Clubs</span>
+                            </div>
+                            <div class="price-column-feature flex-container align-items-flex-start">
+                                <!-- Bootstrap check icon -->
+                                <div class="price-column-check-container flex-container">
+                                    <i class="bi bi-check-circle-fill" focusable="false" style="color:white;opacity:0.7;height:16px;width:16px;" viewbox="0 0 16 16"></i>
+                                </div>
+                                <!-- Product Description -->
+                                <span class="price-column-feature-text" style="font-size:14px">Access to the Production Space</span>
+                            </div>
+                            <div class="price-column-feature flex-container align-items-flex-start">
+                                <!-- Bootstrap check icon -->
+                                <div class="price-column-check-container flex-container">
+                                    <i class="bi bi-check-circle-fill" focusable="false" style="color:white;opacity:0.7;height:16px;width:16px;" viewbox="0 0 16 16"></i>
+                                </div>
+                                <!-- Product Description -->
+                                <span class="price-column-feature-text" style="font-size:14px">Access to the Podcast Room</span>
+                            </div>
+                            <div class="price-column-feature flex-container align-items-flex-start">
+                                <!-- Bootstrap check icon -->
+                                <div class="price-column-check-container flex-container">
+                                    <i class="bi bi-check-circle-fill" focusable="false" style="color:white;opacity:0.7;height:16px;width:16px;" viewbox="0 0 16 16"></i>
+                                </div>
+                                <!-- Product Description -->
+                                <span class="price-column-feature-text" style="font-size:14px">Access to the Knowledge Center</span>
+                            </div>
+                            <div class="price-column-feature flex-container align-items-flex-start">
+                                <!-- Bootstrap check icon -->
+                                <div class="price-column-check-container flex-container">
+                                    <i class="bi bi-check-circle-fill" focusable="false" style="color:white;opacity:0.7;height:16px;width:16px;" viewbox="0 0 16 16"></i>
+                                </div>
+                                <!-- Product Description -->
+                                <span class="price-column-feature-text" style="font-size:14px">Post gigs in the Marketplace</span>
+                            </div>
+                            <div class="price-column-feature flex-container align-items-flex-start">
+                                <!-- Bootstrap check icon -->
+                                <div class="price-column-check-container flex-container">
+                                    <i class="bi bi-check-circle-fill" focusable="false" style="color:white;opacity:0.7;height:16px;width:16px;" viewbox="0 0 16 16"></i>
+                                </div>
+                                <!-- Product Description -->
+                                <span class="price-column-feature-text" style="font-size:14px">1000+ Community Discovery</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div> -->
 
-            <!-- Option 2 -->
-            <!-- <div class="box zone">
-                <div class="card">
-                    <img src="./assets/img/creator.svg" class="card-img-top" alt="logo">
-                    <div class="card-body">
-                        <h1 class="card-title">$1000/year</h1>
-                        <h3 class="card-subtext">You're taking your career more seriously and need more time. In this tier, you get everything in The Hobbist plus more.</h3>
-                        <p class="card-text">
-                            <i class="bi bi-check-circle-fill"> Up to 8 hours per month</i><br>
-                            <i class="bi bi-check-circle-fill"> Free sound critiques</i><br>
-                            <i class="bi bi-check-circle-fill"> Free 1:1 Strategy Planning</i><br>
-                            <i class="bi bi-check-circle-fill"> Free 1:1 Business Consultations</i><br>
-                            <i class="bi bi-check-circle-fill"> Discounted Media Blasts</i><br>
-                        </p>
-                      </div>
+                <!-- Add items to grid-->
+                <div class="price-column flex-container direction-column justify-content-center align-items-center">
+                    <!-- Top half of pricing table-->
+                    <div class="price-column-content flex-container direction-column justify-content-center align-items-center">
+                        <!-- Name and subtext of product-->
+                        <div class="price-column-about-the-product flex-container direction-column">
+                            <div class="price-column-text-and-image flex-container">
+                                <div class="price-column-text-container-height-aligner">
+                                    <div class="price-column-text-container flex-container direction-column">
+                                        <div class="price-column-name flex-container">
+                                            <span class="price-column-name-text">The Creator</span>
+                                        </div>
+                                        <span class="price-column-description">
+                                            You take your career more seriously and need more time. In this tier, you get everything in The Hobbist plus more.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Price and button of product -->
+                        <div class="price-and-button">
+                            <div class="price-column-price-container-height-aligner" style="height: 42px;">
+                                <div class="price-column-price-container">
+                                    <!-- Price -->
+                                    <div class="flex-container align-items-center">
+                                        <span class="price-column-price-text">
+                                            <span>$500</span>
+                                        </span>
+
+                                        <!-- Interval -->
+                                        <span class="price-column-interval-text">
+                                            <span>every 6</span>
+                                            <br>
+                                            <span>months</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+
+                    <hr id="price-hr">
+    
+                    <!-- Bottom half of pricing table-->
+                    <div class="price-column-featured flex-container direction-column">
+                        <span class="price-column-feature-list-header" style="font-size: 14px;">This includes:</span>
+                        <div class="price-column-feature-list flex-container direction-column align-items-flex-start">
+                            <!-- Add items by copying and pasting code below -->
+                            <div class="price-column-feature flex-container align-items-flex-start">
+                                <!-- Bootstrap check icon -->
+                                <div class="price-column-check-container flex-container">
+                                    <i class="bi bi-check-circle-fill" focusable="false" style="color:white;opacity:0.7;height:16px;width:16px;" viewbox="0 0 16 16"></i>
+                                </div>
+                                <!-- Product Description -->
+                                <span class="price-column-feature-text" style="font-size:14px">Up to 8 hours per month</span>
+                            </div>
+                            <div class="price-column-feature flex-container align-items-flex-start">
+                                <!-- Bootstrap check icon -->
+                                <div class="price-column-check-container flex-container">
+                                    <i class="bi bi-check-circle-fill" focusable="false" style="color:white;opacity:0.7;height:16px;width:16px;" viewbox="0 0 16 16"></i>
+                                </div>
+                                <!-- Product Description -->
+                                <span class="price-column-feature-text" style="font-size:14px">Free Sound Critiques</span>
+                            </div>
+                            <div class="price-column-feature flex-container align-items-flex-start">
+                                <!-- Bootstrap check icon -->
+                                <div class="price-column-check-container flex-container">
+                                    <i class="bi bi-check-circle-fill" focusable="false" style="color:white;opacity:0.7;height:16px;width:16px;" viewbox="0 0 16 16"></i>
+                                </div>
+                                <!-- Product Description -->
+                                <span class="price-column-feature-text" style="font-size:14px">Free 1:1 Creator Strategy Planning</span>
+                            </div>
+                            <div class="price-column-feature flex-container align-items-flex-start">
+                                <!-- Bootstrap check icon -->
+                                <div class="price-column-check-container flex-container">
+                                    <i class="bi bi-check-circle-fill" focusable="false" style="color:white;opacity:0.7;height:16px;width:16px;" viewbox="0 0 16 16"></i>
+                                </div>
+                                <!-- Product Description -->
+                                <span class="price-column-feature-text" style="font-size:14px">Free 1:1 Business Consultations</span>
+                            </div>
+                            <div class="price-column-feature flex-container align-items-flex-start">
+                                <!-- Bootstrap check icon -->
+                                <div class="price-column-check-container flex-container">
+                                    <i class="bi bi-check-circle-fill" focusable="false" style="color:white;opacity:0.7;height:16px;width:16px;" viewbox="0 0 16 16"></i>
+                                </div>
+                                <!-- Product Description -->
+                                <span class="price-column-feature-text" style="font-size:14px">Discounted Media Blasts</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div> -->
 
-            <!-- Option 3 -->
-            <!-- <div class="box zone">
-                <div class="card">
-                    <img src="./assets/img/professional.svg" class="card-img-top" alt="logo">
-                    <div class="card-body">
-                        <h1 class="card-title">$1500/year</h1>
-                        <h3 class="card-subtext">Are you part of a team? Maybe you're a manager with multiple artists. You need everything in The Creator tier and more, and you need it consistently. In this tier, you get full access to the Double M Studios business team and partners.</h3>
-                        <p class="card-text">
-                            <i class="bi bi-check-circle-fill"> Up to 16 hours per month</i><br>
-                            <i class="bi bi-check-circle-fill"> Priority booking</i><br>
-                            <i class="bi bi-check-circle-fill"> Access to our best rooms</i><br>
-                            <i class="bi bi-check-circle-fill"> An elite team to support you</i><br>
-                            <i class="bi bi-check-circle-fill"> Free rollout planning</i><br>
-                            <i class="bi bi-check-circle-fill"> Free EPKs</i><br>
-                            <i class="bi bi-check-circle-fill"> Free MNPLY Pro subscription</i><br>
-                            <i class="bi bi-check-circle-fill"> Strategic business partners</i><br>
-                            <i class="bi bi-check-circle-fill"> Discounted Double M Studio Services</i><br>
-                        </p>
-                      </div>
+                <!-- Add items to grid-->
+                <div class="price-column flex-container direction-column justify-content-center align-items-center">
+                    <!-- Top half of pricing table-->
+                    <div class="price-column-content flex-container direction-column justify-content-center align-items-center">
+                        <!-- Name and subtext of product-->
+                        <div class="price-column-about-the-product flex-container direction-column">
+                            <div class="price-column-text-and-image flex-container">
+                                <div class="price-column-text-container-height-aligner">
+                                    <div class="price-column-text-container flex-container direction-column">
+                                        <div class="price-column-name flex-container">
+                                            <span class="price-column-name-text">The Professional</span>
+                                        </div>
+                                        <span class="price-column-description">
+                                            You need everything in The Creator tier and more. In this tier, you get full access to the Double M Studios business team and partners.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Price and button of product -->
+                        <div class="price-and-button">
+                            <div class="price-column-price-container-height-aligner" style="height: 42px;">
+                                <div class="price-column-price-container">
+                                    <!-- Price -->
+                                    <div class="flex-container align-items-center">
+                                        <span class="price-column-price-text">
+                                            <span>$750</span>
+                                        </span>
+
+                                        <!-- Interval -->
+                                        <span class="price-column-interval-text">
+                                            <span>every 6</span>
+                                            <br>
+                                            <span>months</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+
+                    <hr class="price-hr">
+    
+                    <!-- Bottom half of pricing table-->
+                    <div class="price-column-featured flex-container direction-column">
+                        <span class="price-column-feature-list-header" style="font-size: 14px;">This includes:</span>
+                        <div class="price-column-feature-list flex-container direction-column align-items-flex-start">
+                            <!-- Add items by copying and pasting code below -->
+                            <div class="price-column-feature flex-container align-items-flex-start">
+                                <!-- Bootstrap check icon -->
+                                <div class="price-column-check-container flex-container">
+                                    <i class="bi bi-check-circle-fill" focusable="false" style="color:white;opacity:0.7;height:16px;width:16px;" viewbox="0 0 16 16"></i>
+                                </div>
+                                <!-- Product Description -->
+                                <span class="price-column-feature-text" style="font-size:14px">Up to 16 hours per month</span>
+                            </div>
+                            <div class="price-column-feature flex-container align-items-flex-start">
+                                <!-- Bootstrap check icon -->
+                                <div class="price-column-check-container flex-container">
+                                    <i class="bi bi-check-circle-fill" focusable="false" style="color:white;opacity:0.7;height:16px;width:16px;" viewbox="0 0 16 16"></i>
+                                </div>
+                                <!-- Product Description -->
+                                <span class="price-column-feature-text" style="font-size:14px">Priority Booking</span>
+                            </div>
+                            <div class="price-column-feature flex-container align-items-flex-start">
+                                <!-- Bootstrap check icon -->
+                                <div class="price-column-check-container flex-container">
+                                    <i class="bi bi-check-circle-fill" focusable="false" style="color:white;opacity:0.7;height:16px;width:16px;" viewbox="0 0 16 16"></i>
+                                </div>
+                                <!-- Product Description -->
+                                <span class="price-column-feature-text" style="font-size:14px">Access to the Best Rooms</span>
+                            </div>
+                            <div class="price-column-feature flex-container align-items-flex-start">
+                                <!-- Bootstrap check icon -->
+                                <div class="price-column-check-container flex-container">
+                                    <i class="bi bi-check-circle-fill" focusable="false" style="color:white;opacity:0.7;height:16px;width:16px;" viewbox="0 0 16 16"></i>
+                                </div>
+                                <!-- Product Description -->
+                                <span class="price-column-feature-text" style="font-size:14px">An Elite Team to Support You</span>
+                            </div>
+                            <div class="price-column-feature flex-container align-items-flex-start">
+                                <!-- Bootstrap check icon -->
+                                <div class="price-column-check-container flex-container">
+                                    <i class="bi bi-check-circle-fill" focusable="false" style="color:white;opacity:0.7;height:16px;width:16px;" viewbox="0 0 16 16"></i>
+                                </div>
+                                <!-- Product Description -->
+                                <span class="price-column-feature-text" style="font-size:14px">Free Rollout Planning</span>
+                            </div>
+                            <div class="price-column-feature flex-container align-items-flex-start">
+                                <!-- Bootstrap check icon -->
+                                <div class="price-column-check-container flex-container">
+                                    <i class="bi bi-check-circle-fill" focusable="false" style="color:white;opacity:0.7;height:16px;width:16px;" viewbox="0 0 16 16"></i>
+                                </div>
+                                <!-- Product Description -->
+                                <span class="price-column-feature-text" style="font-size:14px">Free EPKs</span>
+                            </div>
+                            <div class="price-column-feature flex-container align-items-flex-start">
+                                <!-- Bootstrap check icon -->
+                                <div class="price-column-check-container flex-container">
+                                    <i class="bi bi-check-circle-fill" focusable="false" style="color:white;opacity:0.7;height:16px;width:16px;" viewbox="0 0 16 16"></i>
+                                </div>
+                                <!-- Product Description -->
+                                <span class="price-column-feature-text" style="font-size:14px">Free Media Blasts</span>
+                            </div>
+                            <div class="price-column-feature flex-container align-items-flex-start">
+                                <!-- Bootstrap check icon -->
+                                <div class="price-column-check-container flex-container">
+                                    <i class="bi bi-check-circle-fill" focusable="false" style="color:white;opacity:0.7;height:16px;width:16px;" viewbox="0 0 16 16"></i>
+                                </div>
+                                <!-- Product Description -->
+                                <span class="price-column-feature-text" style="font-size:14px">Free MNPLY Pro subscription</span>
+                            </div>
+                            <div class="price-column-feature flex-container align-items-flex-start">
+                                <!-- Bootstrap check icon -->
+                                <div class="price-column-check-container flex-container">
+                                    <i class="bi bi-check-circle-fill" focusable="false" style="color:white;opacity:0.7;height:16px;width:16px;" viewbox="0 0 16 16"></i>
+                                </div>
+                                <!-- Product Description -->
+                                <span class="price-column-feature-text" style="font-size:14px">Strategic Business Partners</span>
+                            </div>
+                            <div class="price-column-feature flex-container align-items-flex-start">
+                                <!-- Bootstrap check icon -->
+                                <div class="price-column-check-container flex-container">
+                                    <i class="bi bi-check-circle-fill" focusable="false" style="color:white;opacity:0.7;height:16px;width:16px;" viewbox="0 0 16 16"></i>
+                                </div>
+                                <!-- Product Description -->
+                                <span class="price-column-feature-text" style="font-size:14px">Discounted Double M Studio Services</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div> -->
-        <!-- </div> -->
-    <!-- </section> -->
+            </div>
+        </div>
+    </div>
 
-    <div class="typeform" style="text-align:center;"><button data-tf-popup="F4JzFE2g" data-tf-hide-headers data-tf-size="50" data-tf-iframe-props="title=Double M Studios" data-tf-medium="snippet" style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#f8c729;color:#000000;font-size:20px;border-radius:25px;padding:0 33px;height:50px;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none;">Not ready?</button><script src="//embed.typeform.com/next/embed.js"></script><p class="card-subtext" style="margin-top: 15px;">Get notified when we go live instead.</p>
+    <div class="typeform" style="text-align:center;"><button data-tf-popup="F4JzFE2g" data-tf-hide-headers data-tf-size="50" data-tf-iframe-props="title=Double M Studios" data-tf-medium="snippet" style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#f8c729;color:#000000;font-size:20px;border-radius:25px;padding:0 33px;height:50px;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none;">Interested?</button><script src="//embed.typeform.com/next/embed.js"></script><p class="card-subtext" style="margin-top: 15px;">Get notified when we go live.</p>
         
     </div>
 
