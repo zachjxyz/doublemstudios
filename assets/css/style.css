@@ -56,20 +56,6 @@ div {
   flex-direction: column;
 }
 
-/* .justify-content-center {
-  -webkit-box-pack: flex-start;
-  -ms-flex-pack: flex-start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-} */
-
-/* .align-items-center {
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  -webkit-align-items: flex-start;
-  align-items: flex-start;
-} */
-
 .pricing-table-grid {
   display: grid;
   display: -ms-grid;
