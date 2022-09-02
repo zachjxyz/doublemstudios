@@ -288,6 +288,11 @@ hr {
 .book:hover {
   color: #fff;
 }
+
+.book-btn:hover {
+  background-color: #f8c729;
+  color: white;
+}
 @media (max-width: 992px) {
   .book {
     /* margin: 0 15px 0 0; */
