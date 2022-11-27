@@ -30,13 +30,39 @@
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
-    <h1 style="text-align:center;margin-top: 5vh;">What you can get</h1>
-    <p class="card-subtext" style="text-align:center;margin-top: 15px;color:#f8c729;">We go live January 1st, 2023.</p>
-    
-    <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-    <stripe-pricing-table pricing-table-id="prctbl_1LTutJLtl7uMv2C0STZN0yyH"
-    publishable-key="pk_live_51HzPKpLtl7uMv2C0FfkeNxdt9TGRY9AtWknusEjxgvNi4X4EjPRN7b3bPo13VWycfx1uYqulnLnUHrJ28q9LGTAa00QRmabTBQ">
-    </stripe-pricing-table>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+        <h1 class="logo me-auto me-lg-0"><a href="/"><img src="./assets/img/logo.png"></a></h1>
+
+        <nav id="navbar" class="navbar order-last order-lg-0">
+            <ul>
+            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+            <li><a class="nav-link scrollto" href="#about">About us</a></li>
+            <li><a class="nav-link scrollto" href="#services">Services</a></li>
+            <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
+            <li><a class="nav-link scrollto" href="#team">Team</a></li>
+            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+        <!-- .navbar -->
+        <a href="#book" class="book book-btn">Book now!</a>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <section style="margin-top:2vh;">
+        <h1 style="text-align:center;">What you can get</h1>
+        <p class="card-subtext" style="text-align:center;color:#f8c729;">We go live January 1st, 2023.</p>
+
+        <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+        <stripe-pricing-table pricing-table-id="prctbl_1LTutJLtl7uMv2C0STZN0yyH"
+        publishable-key="pk_live_51HzPKpLtl7uMv2C0FfkeNxdt9TGRY9AtWknusEjxgvNi4X4EjPRN7b3bPo13VWycfx1uYqulnLnUHrJ28q9LGTAa00QRmabTBQ">
+        </stripe-pricing-table>
+    </section>
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
