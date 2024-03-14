@@ -3005,6 +3005,11 @@ blog
 footer
 
 ------------------------------------------- */
+.substack {
+  --web_bg_color:#000;
+  --font_family_body_preset: "Outfit", sans-serif;
+}
+
 .mil-footer-menu {
   margin-bottom: 120px;
 }
