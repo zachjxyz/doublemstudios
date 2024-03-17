@@ -5,15 +5,13 @@ const url = "https://blog.doublemstudios.com/ghost/api/content/posts/?key=51f281
 fetch(url)
     .then(res => {
         return res.json();
-        // console.log(res);
     })
     .then(data => {
-        console.log(data);
 
         // Blog Post 1 Info
         title1 = data.posts[0].title;
         featureImage1 = data.posts[0].feature_image;
-        excerpt1 = data.posts[0].excerpt;
+        excerpt1 = data.posts[0].custom_excerpt;
         url1 = data.posts[0].url;
         readingTime1 = data.posts[0].reading_time;
 
@@ -22,11 +20,10 @@ fetch(url)
         document.getElementById("readingTime1").insertAdjacentHTML("afterbegin",readingTime1);
         document.getElementById("excerpt1").insertAdjacentHTML("afterbegin",excerpt1);
 
-
         // Blog Post 2 Info
         title2 = data.posts[1].title;
         featureImage2 = data.posts[1].feature_image;
-        excerpt2 = data.posts[1].excerpt;
+        excerpt2 = data.posts[1].custom_excerpt;
         url2 = data.posts[1].url;
         readingTime2 = data.posts[1].reading_time;
 
