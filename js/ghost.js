@@ -8,14 +8,19 @@ fetch(url)
     })
     .then(data => {
 
-        console.log(data)
-
         // Blog Post 1 Info
         title1 = data.posts[0].title;
         featureImage1 = data.posts[0].feature_image;
         excerpt1 = data.posts[0].custom_excerpt;
         url1 = data.posts[0].url;
         readingTime1 = data.posts[0].reading_time;
+
+        window.onload=()=>{
+            var element = document.getElementById("blog1");
+            element.href = url1;
+            var element2 = document.getElementById("blog2");
+            element2.href = url2;
+        };
 
         document.getElementById("title1").insertAdjacentHTML("beforeend",title1);
         document.getElementById("featureImage1").src=featureImage1;
@@ -33,12 +38,6 @@ fetch(url)
         document.getElementById("featureImage2").src=featureImage2;
         document.getElementById("readingTime2").insertAdjacentHTML("afterbegin",readingTime2);
         document.getElementById("excerpt2").insertAdjacentHTML("afterbegin",excerpt2);
-
-        window.onload=()=>{
-            var element = document.getElementById("blog1");
-            element.href = url1;
-            var element2 = document.getElementById("blog2");
-            element2.href = url2;
-        };
+        
     })
     .catch(error  => console.log(error));
