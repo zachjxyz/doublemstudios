@@ -656,6 +656,11 @@ button
   }
 }
 
+.book-now {
+  display: flex;
+  justify-content: center;
+}
+
 /* -------------------------------------------
 
 form
