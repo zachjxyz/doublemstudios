@@ -8,11 +8,14 @@ fetch(url)
     })
     .then(data => {
 
+        console.log(data)
+
         // Blog Post 1 Info
         title1 = data.posts[0].title;
         featureImage1 = data.posts[0].feature_image;
         excerpt1 = data.posts[0].custom_excerpt;
         url1 = data.posts[0].url;
+        console.log(url1)
         readingTime1 = data.posts[0].reading_time;
 
         document.getElementById("title1").insertAdjacentHTML("beforeend",title1);
@@ -25,6 +28,7 @@ fetch(url)
         featureImage2 = data.posts[1].feature_image;
         excerpt2 = data.posts[1].custom_excerpt;
         url2 = data.posts[1].url;
+        console.log(url2)
         readingTime2 = data.posts[1].reading_time;
 
         document.getElementById("title2").insertAdjacentHTML("beforeend",title2);
