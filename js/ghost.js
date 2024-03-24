@@ -1,45 +1,54 @@
-const url = "https://blog.doublemstudios.com/ghost/api/content/posts/?key=26364e350f486654921c1e10f2";
+const url = "https://blog.doublemstudios.com/ghost/api/content/posts/?key=26364e350f486654921c1e10f2&limit=2&include=authors";
 
-// const options = { }
-
-document.addEventListener("DOMContentLoaded", function(event) { 
-    // your code here
+document.addEventListener("DOMContentLoaded", function(event) {
     fetch(url)
     .then(res => {
         return res.json();
     })
     .then(data => {
+        idx_of_blogs = Object.keys(data.posts).length - 1;
 
-        // Blog Post 1 Variables
-        title1 = data.posts[0].title;
-        featureImage1 = data.posts[0].feature_image;
-        excerpt1 = data.posts[0].custom_excerpt;
-        url1 = data.posts[0].url;
-        readingTime1 = data.posts[0].reading_time;
-        element = document.getElementById("blog1");
-        
-        // Blog Post 2 Variables
-        title2 = data.posts[1].title;
-        featureImage2 = data.posts[1].feature_image;
-        excerpt2 = data.posts[1].custom_excerpt;
-        url2 = data.posts[1].url;
-        readingTime2 = data.posts[1].reading_time;
-        element2 = document.getElementById("blog2");
-        
-        // Blog Post 1 DOM Changes
-        document.getElementById("title1").insertAdjacentHTML("beforeend",title1);
-        document.getElementById("featureImage1").src=featureImage1;
-        document.getElementById("readingTime1").insertAdjacentHTML("afterbegin",readingTime1);
-        document.getElementById("excerpt1").insertAdjacentHTML("afterbegin",excerpt1);
-        element.href = url1;
+        blog_posts = document.getElementById('post-content');
 
-        // Blog Post 2 DOM Changes
-        document.getElementById("title2").insertAdjacentHTML("beforeend",title2);
-        document.getElementById("featureImage2").src=featureImage2;
-        document.getElementById("readingTime2").insertAdjacentHTML("afterbegin",readingTime2);
-        document.getElementById("excerpt2").insertAdjacentHTML("afterbegin",excerpt2);
-        element2.href = url2;
-        
+        for (i = idx_of_blogs; i >= 0; i--) {
+            // let blog_id = data.posts[i].id;
+            // let blog_html = data.posts[i].html;
+            // let blog_slug = data.posts[i].slug;
+            // let blog_author = data.posts[i].authors[i].name;
+            let blog_title = data.posts[i].title;
+            let blog_image = data.posts[i].feature_image;
+            let blog_excerpt = data.posts[i].custom_excerpt;
+            let blog_link = data.posts[i].url;
+            let reading_time = data.posts[i].reading_time;
+            let blog_date = Date.parse(data.posts[i].published_at);
+
+            let date = new Date(blog_date);
+
+            let blog_year = date.getFullYear();
+            let blog_month = (date.getMonth() + 1).toString().padStart(2, "0");
+            let blog_day = date.getUTCDate();
+            
+            blog_posts.insertAdjacentHTML("afterbegin", 
+                `<div class="col-lg-6">
+                    <a href="${blog_link}" target="_blank" class="mil-blog-card mil-mb-60">
+                        <div class="mil-cover-frame mil-up">
+                            <img src="${blog_image}" alt="${blog_title}'s Cover">
+                        </div>
+                        <div class="mil-post-descr">
+                            <div class="mil-labels mil-up mil-mb-30">
+                                <div class="mil-label mil-upper">Reading Time</div>
+                                <div class="mil-label mil-upper mil-accent">${reading_time} mins</div>
+                            </div>
+                            <h4 class="mil-up mil-mb-30">${blog_month}/${blog_day}/${blog_year}: ${blog_title}</h4>
+                            <p class="mil-post-text mil-up mil-mb-30">${blog_excerpt}</p>
+                            <div class="mil-link mil-dark mil-arrow-place mil-up">
+                                <span>Continue reading ➤</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>`
+            );
+        }
     })
     .catch(error  => console.log(error));
   });
