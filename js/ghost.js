@@ -1,4 +1,4 @@
-const url = "https://blog.doublemstudios.com/ghost/api/content/posts/?key=26364e350f486654921c1e10f2&limit=2&include=authors";
+const url = "https://blog.doublemstudios.com/ghost/api/content/posts/?key=26364e350f486654921c1e10f2&tag=newsletter&limit=2&include=authors";
 
 document.addEventListener("DOMContentLoaded", function(event) {
     fetch(url)
