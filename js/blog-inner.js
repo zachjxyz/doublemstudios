@@ -6,9 +6,8 @@ const api = new GhostContentAPI({
 
 api.posts
   .browse({
-    limit: 2,
-    include: "tags, authors",
-    filter: "tag:newsletter",
+    limit: 5,
+    filter: "tag:engineering",
   })
   .then((obj) => {
     let posts = obj.reverse();
@@ -16,6 +15,12 @@ api.posts
     blog_posts = document.getElementById("post-content");
 
     obj.forEach((post) => {
+      let blog_date = new Date(Date(post.published_at));
+
+      let blog_month = blog_date.getUTCMonth();
+      let blog_day = blog_date.getUTCDate();
+      let blog_year = blog_date.getUTCFullYear();
+
       blog_posts.insertAdjacentHTML(
         "afterbegin",
         `<div class="col-lg-6">
@@ -30,8 +35,8 @@ api.posts
                         </div>
                         <h4 class="mil-up mil-mb-30">${post.title}</h4>
                         <p class="mil-post-text mil-up mil-mb-30">${post.custom_excerpt}</p>
-                        <div class="mil-link mil-up">
-                            <span>Continue reading →</span>
+                        <div class="mil-link mil-dark mil-arrow-place mil-up">
+                            <span>Continue reading ➤</span>
                         </div>
                     </div>
                 </a>

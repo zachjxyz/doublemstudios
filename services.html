@@ -1,585 +1,818 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
+    <head>
+        <!-- Built by Zach J aka Ghost -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- Built by Zach J aka Ghost -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- Cookie consent from Osano -->
+        <script src="https://cmp.osano.com/AzqVeCU7W9MJl7EAE/6ac1c84d-a78c-4a02-9d6f-37188310cdf4/osano.js"></script>
 
-    <!-- Cookie consent from Osano -->
-    <script src="https://cmp.osano.com/AzqVeCU7W9MJl7EAE/6ac1c84d-a78c-4a02-9d6f-37188310cdf4/osano.js"></script>
+        <!-- Segment Script -->
+        <script>
+            !(function () {
+                var i = "analytics",
+                    analytics = (window[i] = window[i] || []);
+                if (!analytics.initialize)
+                    if (analytics.invoked)
+                        window.console &&
+                            console.error &&
+                            console.error("Segment snippet included twice.");
+                    else {
+                        analytics.invoked = !0;
+                        analytics.methods = [
+                            "trackSubmit",
+                            "trackClick",
+                            "trackLink",
+                            "trackForm",
+                            "pageview",
+                            "identify",
+                            "reset",
+                            "group",
+                            "track",
+                            "ready",
+                            "alias",
+                            "debug",
+                            "page",
+                            "screen",
+                            "once",
+                            "off",
+                            "on",
+                            "addSourceMiddleware",
+                            "addIntegrationMiddleware",
+                            "setAnonymousId",
+                            "addDestinationMiddleware",
+                            "register",
+                        ];
+                        analytics.factory = function (e) {
+                            return function () {
+                                if (window[i].initialized)
+                                    return window[i][e].apply(
+                                        window[i],
+                                        arguments,
+                                    );
+                                var n = Array.prototype.slice.call(arguments);
+                                if (
+                                    [
+                                        "track",
+                                        "screen",
+                                        "alias",
+                                        "group",
+                                        "page",
+                                        "identify",
+                                    ].indexOf(e) > -1
+                                ) {
+                                    var c = document.querySelector(
+                                        "link[rel='canonical']",
+                                    );
+                                    n.push({
+                                        __t: "bpc",
+                                        c:
+                                            (c && c.getAttribute("href")) ||
+                                            void 0,
+                                        p: location.pathname,
+                                        u: location.href,
+                                        s: location.search,
+                                        t: document.title,
+                                        r: document.referrer,
+                                    });
+                                }
+                                n.unshift(e);
+                                analytics.push(n);
+                                return analytics;
+                            };
+                        };
+                        for (var n = 0; n < analytics.methods.length; n++) {
+                            var key = analytics.methods[n];
+                            analytics[key] = analytics.factory(key);
+                        }
+                        analytics.load = function (key, n) {
+                            var t = document.createElement("script");
+                            t.type = "text/javascript";
+                            t.async = !0;
+                            t.setAttribute(
+                                "data-global-segment-analytics-key",
+                                i,
+                            );
+                            t.src =
+                                "https://cdn.segment.com/analytics.js/v1/" +
+                                key +
+                                "/analytics.min.js";
+                            var r = document.getElementsByTagName("script")[0];
+                            r.parentNode.insertBefore(t, r);
+                            analytics._loadOptions = n;
+                        };
+                        analytics._writeKey =
+                            "JswshSqaFQCx76vZznKIQBssdwkJpHIi";
+                        analytics.SNIPPET_VERSION = "5.2.0";
+                        analytics.load("JswshSqaFQCx76vZznKIQBssdwkJpHIi");
+                        analytics.page();
+                    }
+            })();
+        </script>
 
-    <!-- Segment Script -->
-    <script>
-        !function(){var i="analytics",analytics=window[i]=window[i]||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","screen","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware","register"];analytics.factory=function(e){return function(){if(window[i].initialized)return window[i][e].apply(window[i],arguments);var n=Array.prototype.slice.call(arguments);if(["track","screen","alias","group","page","identify"].indexOf(e)>-1){var c=document.querySelector("link[rel='canonical']");n.push({__t:"bpc",c:c&&c.getAttribute("href")||void 0,p:location.pathname,u:location.href,s:location.search,t:document.title,r:document.referrer})}n.unshift(e);analytics.push(n);return analytics}};for(var n=0;n<analytics.methods.length;n++){var key=analytics.methods[n];analytics[key]=analytics.factory(key)}analytics.load=function(key,n){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.setAttribute("data-global-segment-analytics-key",i);t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var r=document.getElementsByTagName("script")[0];r.parentNode.insertBefore(t,r);analytics._loadOptions=n};analytics._writeKey="JswshSqaFQCx76vZznKIQBssdwkJpHIi";;analytics.SNIPPET_VERSION="5.2.0";
-        analytics.load("JswshSqaFQCx76vZznKIQBssdwkJpHIi");
-        analytics.page();
-        }}();
-    </script>
+        <!-- Customer.io Script -->
+        <script>
+            !(function () {
+                var analytics = (window.analytics = window.analytics || []);
+                if (!analytics.initialize)
+                    if (analytics.invoked)
+                        window.console &&
+                            console.error &&
+                            console.error("Snippet included twice.");
+                    else {
+                        analytics.invoked = !0;
+                        analytics.methods = [
+                            "trackSubmit",
+                            "trackClick",
+                            "trackLink",
+                            "trackForm",
+                            "pageview",
+                            "identify",
+                            "reset",
+                            "group",
+                            "track",
+                            "ready",
+                            "alias",
+                            "debug",
+                            "page",
+                            "once",
+                            "off",
+                            "on",
+                            "addSourceMiddleware",
+                            "addIntegrationMiddleware",
+                            "setAnonymousId",
+                            "addDestinationMiddleware",
+                        ];
+                        analytics.factory = function (e) {
+                            return function () {
+                                var t = Array.prototype.slice.call(arguments);
+                                t.unshift(e);
+                                analytics.push(t);
+                                return analytics;
+                            };
+                        };
+                        for (var e = 0; e < analytics.methods.length; e++) {
+                            var key = analytics.methods[e];
+                            analytics[key] = analytics.factory(key);
+                        }
+                        analytics.load = function (key, e) {
+                            var t = document.createElement("script");
+                            t.type = "text/javascript";
+                            t.async = !0;
+                            t.src =
+                                "https://cdp.customer.io/v1/analytics-js/snippet/" +
+                                key +
+                                "/analytics.min.js";
+                            var n = document.getElementsByTagName("script")[0];
+                            n.parentNode.insertBefore(t, n);
+                            analytics._writeKey = key;
+                            analytics._loadOptions = e;
+                        };
+                        analytics.SNIPPET_VERSION = "4.15.3";
+                        analytics.load("8d54beff9271463389e5");
+                        analytics.page();
+                    }
+            })();
+        </script>
 
-    <!-- Customer.io Script -->
-    <script>
-        !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdp.customer.io/v1/analytics-js/snippet/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._writeKey=key;analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.15.3";
-          analytics.load("8d54beff9271463389e5");
-          analytics.page();
-        }}();
-    </script>
+        <!-- Google Tag Manager -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    "gtm.start": new Date().getTime(),
+                    event: "gtm.js",
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != "dataLayer" ? "&l=" + l : "";
+                j.async = true;
+                j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, "script", "dataLayer", "GTM-T27H2NR9");
+        </script>
 
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-T27H2NR9');
-    </script>
+        <!-- Hubspot Script -->
+        <script
+            type="text/javascript"
+            id="hs-script-loader"
+            async
+            defer
+            src="//js.hs-scripts.com/46395239.js"
+        ></script>
+        <!-- End of HubSpot Embed Code -->
 
-    <!-- Hubspot Script -->
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/46395239.js"></script>
-    <!-- End of HubSpot Embed Code -->
+        <link rel="stylesheet" href="css/plugins/bootstrap-grid.css" />
+        <link rel="stylesheet" href="css/plugins/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/plugins/swiper.min.css" />
+        <link rel="stylesheet" href="css/plugins/fancybox.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
 
+        <title>
+            Our Services | Double M Studios | The DMV's #1 Music Recording
+            Studio located in Rockville, MD
+        </title>
 
-    <link rel="stylesheet" href="css/plugins/bootstrap-grid.css">
-    <link rel="stylesheet" href="css/plugins/font-awesome.min.css">
-    <link rel="stylesheet" href="css/plugins/swiper.min.css">
-    <link rel="stylesheet" href="css/plugins/fancybox.min.css">
-    <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
 
-    <title>Our Services | Double M Studios | The DMV's #1 Music Recording Studio located in Rockville, MD</title>
+        <!-- ghost js -->
+        <script src="js/ghost.js"></script>
 
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico"/>
+        <!-- Meta Pixel Code -->
+        <script>
+            !(function (f, b, e, v, n, t, s) {
+                if (f.fbq) return;
+                n = f.fbq = function () {
+                    n.callMethod
+                        ? n.callMethod.apply(n, arguments)
+                        : n.queue.push(arguments);
+                };
+                if (!f._fbq) f._fbq = n;
+                n.push = n;
+                n.loaded = !0;
+                n.version = "2.0";
+                n.queue = [];
+                t = b.createElement(e);
+                t.async = !0;
+                t.src = v;
+                s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s);
+            })(
+                window,
+                document,
+                "script",
+                "https://connect.facebook.net/en_US/fbevents.js",
+            );
+            fbq("init", "437189614132687");
+            fbq("track", "PageView");
+        </script>
+        <noscript>
+            <img
+                height="1"
+                width="1"
+                style="display: none"
+                src="https://www.facebook.com/tr?id=437189614132687&ev=PageView&noscript=1"
+            />
+        </noscript>
 
-    <!-- ghost js -->
-    <script src="js/ghost.js"></script>
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-CTHCR0Y7MP"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-    <!-- Meta Pixel Code -->
-    <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '437189614132687');
-        fbq('track', 'PageView');
-    </script>
-    <noscript>
-        <img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=437189614132687&ev=PageView&noscript=1"
-        />
-    </noscript>
+            gtag("config", "G-CTHCR0Y7MP");
+        </script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CTHCR0Y7MP"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+        <!-- Hotjar Tracking Code -->
+        <script>
+            (function (h, o, t, j, a, r) {
+                h.hj =
+                    h.hj ||
+                    function () {
+                        (h.hj.q = h.hj.q || []).push(arguments);
+                    };
+                h._hjSettings = { hjid: 3292699, hjsv: 6 };
+                a = o.getElementsByTagName("head")[0];
+                r = o.createElement("script");
+                r.async = 1;
+                r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(
+                window,
+                document,
+                "https://static.hotjar.com/c/hotjar-",
+                ".js?sv=",
+            );
+        </script>
+    </head>
 
-        gtag('config', 'G-CTHCR0Y7MP');
-    </script>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-T27H2NR9"
+                height="0"
+                width="0"
+                style="display: none; visibility: hidden"
+            ></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
 
-    <!-- Hotjar Tracking Code -->
-    <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:3292699,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-    </script>
+        <!-- wrapper -->
+        <div class="mil-wrapper" id="top">
+            <!-- scrollbar progress -->
+            <div class="mil-progress-track">
+                <div class="mil-progress"></div>
+            </div>
+            <!-- scrollbar progress end -->
 
-</head>
+            <!-- nav bar -->
+            <div id="nav-container"></div>
+            <!-- nav bar -->
 
-<body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T27H2NR9"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
+            <!-- curtain -->
+            <div class="mil-curtain"></div>
+            <!-- curtain end -->
 
-    <!-- wrapper -->
-    <div class="mil-wrapper" id="top">
-
-        <!-- scrollbar progress -->
-        <div class="mil-progress-track">
-            <div class="mil-progress"></div>
-        </div>
-        <!-- scrollbar progress end -->
-
-        <!-- menu -->
-        <div class="mil-menu-frame">
-            <!-- frame clone -->
-            <div class="mil-frame-top">
-                <a href="/" class="mil-logo">DMS</a>
-                <div class="mil-menu-btn">
-                    <span></span>
+            <!-- frame -->
+            <div class="mil-frame">
+                <div class="mil-frame-top">
+                    <a href="/" class="mil-logo">DMS</a>
+                    <div class="mil-menu-btn">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="mil-frame-bottom">
+                    <div class="mil-current-page"></div>
+                    <div class="mil-back-to-top">
+                        <a
+                            href="#top"
+                            class="mil-link mil-dark mil-arrow-place"
+                        >
+                            <span>Back to top</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <!-- frame clone end -->
-            <div class="container">
-                <div class="mil-menu-content">
-                    <div class="row">
-                        <div class="col-xl-5">
+            <!-- frame end -->
 
-                            <nav class="mil-main-menu" id="swupMenu">
-                                <ul>
-                                    <li class="mil-has-children">
-                                        <a href="/">Home</a>
-                                    </li>
-                                    <li class="mil-has-children mil-active">
-                                        <a href="#.">Services</a>
-                                        <ul>
-                                            <li><a href="https://doublemstudios.as.me/" target="_blank">Book A Recording Session</a></li>
-                                            <li><a href="https://app.acuityscheduling.com/catalog.php?owner=22352524&category=Gold+Member" target="_blank">Become a Member</a></li>
-                                            <li><a href="https://doublemstudios.as.me/?appointmentType=category:Mixes" target="_blank">Get Your Songs Mixed</a></li>
-                                            <li><a href="https://doublemstudios.as.me/private-events">Book A Private Event</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="mil-has-children">
-                                        <a href="#.">Community</a>
-                                        <ul>
-                                            <li><a href="https://discord.gg/sx43dbus3x" target="_blank">Join Our Discord</a></li>
-                                            <li><a href="team.html">Meet Our Team</a></li>
-                                            <li><a href="https://blog.doublemstudios.com/" target="_blank">Read Our Blog</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="mil-has-children">
-                                        <a href="#.">Studio Info</a>
-                                        <ul>
-                                            <li><a href="contact.html" target="_blank" class="mil-light-soft">Contact Us</a></li>
-                                            <li><a href="https://cal.com/doublemstudios/studio-walkthrough" target="_blank" class="mil-light-soft">Tour The Space</a></li>
-                                            <li><a href="https://www.eventbrite.com/o/double-m-studios-59359567573" target="_blank" class="mil-light-soft">Come to an Event</a></li>
-                                            <li><a href="https://www.instagram.com/doublemstudios_" target="_blank" class="mil-light-soft">Follow Our Instagram</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="mil-has-children">
-                                        <a href="#.">Login</a>
-                                        <ul>
-                                            <li><a href="#">Login</a></li>
-                                            <li><a href="#">Sign-up</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </nav>
-
-                        </div>
-                        <div class="col-xl-7">
-
-                            <div class="mil-menu-right-frame">
-                                <div class="mil-animation-in">
+            <!-- content -->
+            <div class="mil-content">
+                <div id="swupMain" class="mil-main-transition">
+                    <!-- banner -->
+                    <div class="mil-dark-bg">
+                        <div class="mil-inner-banner">
+                            <div class="mi-invert-fix">
+                                <div class="mil-banner-content mil-up">
                                     <div class="mil-animation-frame">
-                                        <div class="mil-animation mil-position-1 mil-scale" data-value-1="2" data-value-2="2"></div>
+                                        <div
+                                            class="mil-animation mil-position-4 mil-scale"
+                                            data-value-1="6"
+                                            data-value-2="1.4"
+                                        ></div>
+                                    </div>
+                                    <div class="container">
+                                        <ul
+                                            class="mil-breadcrumbs mil-light mil-mb-60"
+                                        >
+                                            <li><a href="/">Home</a></li>
+                                            <li>
+                                                <a href="services.html"
+                                                    >Services</a
+                                                >
+                                            </li>
+                                        </ul>
+                                        <h1 class="mil-muted mil-mb-60">
+                                            This
+                                            <span class="mil-thin"
+                                                >is what we</span
+                                            ><br />
+                                            do best
+                                        </h1>
+                                        <a
+                                            href="#services"
+                                            class="mil-link mil-accent mil-arrow-place mil-down-arrow"
+                                        >
+                                            <span>Continue Reading</span>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="mil-menu-right">
+                            </div>
+                        </div>
+                        <!-- banner end -->
+
+                        <!-- services -->
+                        <section id="services">
+                            <div class="mi-invert-fix">
+                                <div class="container mil-p-120-60">
                                     <div class="row">
-                                        <div class="col-lg-8 mil-mb-60">
-
-                                            <h6 class="mil-muted mil-mb-30">Studio Initiatives</h6>
-
-                                            <ul class="mil-menu-list">
-                                                <li><a href="#" class="mil-light-soft">Community Activations</a></li>
-                                                <li><a href="#" class="mil-light-soft">Omega Recording Studios</a></li>
-                                                <li><a href="#" class="mil-light-soft">Twin Valley Distillers</a></li>
-                                                <li><a href="#" class="mil-light-soft">Montgomery County Public Schools</a></li>
-                                            </ul>
-
+                                        <div class="col-lg-5">
+                                            <div
+                                                class="mil-lines-place mil-light"
+                                            ></div>
                                         </div>
-                                    </div>
-                                    <div class="mil-divider mil-mb-60"></div>
-                                    <div class="row justify-content-between">
-                                        <div class="col-lg-4 mil-mb-60">
-                                            <h6 class="mil-muted mil-mb-30">Legal Stuff</h6>
-                                            <ul class="mil-menu-list">
-                                                <li><a href="legal.html" class="mil-light-soft">Privacy Policy</a></li>
-                                                <li><a href="legal.html" class="mil-light-soft">Terms & Conditions</a></li>
-                                                <li><a href="legal.html" class="mil-light-soft">Cookie Policy</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-lg-4 mil-mb-60">
-                                            <h6 class="mil-muted mil-mb-30">Studio Info</h6>
-                                            <p class="mil-light-soft mil-up">Daily: 11am - 3am</p>
-                                            <br>
-                                            <p class="mil-light-soft mil-up">966 Hungerford Drive 19B, Rockville, MD 20850</p>
-                                            <br>
-                                            <p class="mil-light-soft mil-up">+1 301 531 4315</p>
+                                        <div class="col-lg-7">
+                                            <div class="row">
+                                                <div class="col-md-6 col-lg-6">
+                                                    <div
+                                                        class="mil-service-card-lg mil-more mil-accent-cursor mil-offset"
+                                                    >
+                                                        <h4
+                                                            class="mil-muted mil-up mil-mb-30"
+                                                        >
+                                                            Music Services
+                                                        </h4>
+                                                        <p
+                                                            class="mil-descr mil-light-soft mil-up mil-mb-30"
+                                                        >
+                                                            We're a
+                                                            one-stop-shop for
+                                                            your sound. Whether
+                                                            you want to complete
+                                                            an entire project or
+                                                            get a custom beat.
+                                                            Our highly-skilled
+                                                            engineers got you!
+                                                        </p>
+                                                        <ul
+                                                            class="mil-service-list mil-light mil-mb-30"
+                                                        >
+                                                            <li class="mil-up">
+                                                                Music Recording
+                                                            </li>
+                                                            <li class="mil-up">
+                                                                High-quality
+                                                                Mixing
+                                                            </li>
+                                                            <li class="mil-up">
+                                                                High-fidelity
+                                                                Mastering
+                                                            </li>
+                                                            <li class="mil-up">
+                                                                Music Production
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-6">
+                                                    <div
+                                                        class="mil-service-card-lg mil-more mil-accent-cursor"
+                                                    >
+                                                        <h4
+                                                            class="mil-muted mil-up mil-mb-30"
+                                                        >
+                                                            Creative Development
+                                                        </h4>
+                                                        <p
+                                                            class="mil-descr mil-light-soft mil-up mil-mb-30"
+                                                        >
+                                                            From the beginning,
+                                                            we believed in
+                                                            supporting our
+                                                            artists beyond
+                                                            recording sessions.
+                                                            With the expansion
+                                                            of our Artist
+                                                            Development Team, we
+                                                            can.
+                                                        </p>
+                                                        <ul
+                                                            class="mil-service-list mil-light mil-mb-30"
+                                                        >
+                                                            <li class="mil-up">
+                                                                Songwriting
+                                                                Sessions
+                                                            </li>
+                                                            <li class="mil-up">
+                                                                Sound Critiques
+                                                            </li>
+                                                            <li class="mil-up">
+                                                                Project
+                                                                Sequencing
+                                                            </li>
+                                                            <li class="mil-up">
+                                                                Music Strategy
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-6">
+                                                    <div
+                                                        class="mil-service-card-lg mil-more mil-accent-cursor mil-offset"
+                                                    >
+                                                        <h4
+                                                            class="mil-muted mil-up mil-mb-30"
+                                                        >
+                                                            Community
+                                                            Activations
+                                                        </h4>
+                                                        <p
+                                                            class="mil-descr mil-light-soft mil-up mil-mb-30"
+                                                        >
+                                                            We're building a
+                                                            community for
+                                                            like-minded,
+                                                            ambitious creatives.
+                                                            Come to any of these
+                                                            events to meet our
+                                                            people.
+                                                        </p>
+                                                        <ul
+                                                            class="mil-service-list mil-light mil-mb-30"
+                                                        >
+                                                            <li class="mil-up">
+                                                                Educational
+                                                                Sessions
+                                                            </li>
+                                                            <li class="mil-up">
+                                                                Networking
+                                                                Events
+                                                            </li>
+                                                            <li class="mil-up">
+                                                                Creative
+                                                                Collaborations
+                                                            </li>
+                                                            <li class="mil-up">
+                                                                Private Events
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-6">
+                                                    <div
+                                                        class="mil-service-card-lg mil-more mil-accent-cursor"
+                                                    >
+                                                        <h4
+                                                            class="mil-muted mil-up mil-mb-30"
+                                                        >
+                                                            Brand Partnerships
+                                                        </h4>
+                                                        <p
+                                                            class="mil-descr mil-light-soft mil-up mil-mb-30"
+                                                        >
+                                                            Each year, we work
+                                                            with a small cohort
+                                                            of artists who want
+                                                            to take it to the
+                                                            next level.
+                                                        </p>
+                                                        <ul
+                                                            class="mil-service-list mil-light mil-mb-30"
+                                                        >
+                                                            <li class="mil-up">
+                                                                Brand
+                                                                Monetization
+                                                            </li>
+                                                            <li class="mil-up">
+                                                                Business
+                                                                Operations
+                                                            </li>
+                                                            <li class="mil-up">
+                                                                Long-term
+                                                                Strategy
+                                                            </li>
+                                                            <li class="mil-up">
+                                                                Creative
+                                                                Independence
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="mil-up book-now">
+                                                    <a
+                                                        href="https://doublemstudios.as.me/"
+                                                        target="_blank"
+                                                        class="mil-button mil-arrow-place"
+                                                    >
+                                                        <span
+                                                            >Book Your Session
+                                                            Today</span
+                                                        >
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-                        </div>
+                        </section>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- menu -->
+                    <!-- services end -->
 
-        <!-- curtain -->
-        <div class="mil-curtain"></div>
-        <!-- curtain end -->
-
-        <!-- frame -->
-        <div class="mil-frame">
-            <div class="mil-frame-top">
-                <a href="/" class="mil-logo">DMS</a>
-                <div class="mil-menu-btn">
-                    <span></span>
-                </div>
-            </div>
-            <div class="mil-frame-bottom">
-                <div class="mil-current-page"></div>
-                <div class="mil-back-to-top">
-                    <a href="#top" class="mil-link mil-dark mil-arrow-place">
-                        <span>Back to top</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- frame end -->
-
-        <!-- content -->
-        <div class="mil-content">
-            <div id="swupMain" class="mil-main-transition">
-
-                <!-- banner -->
-                <div class="mil-dark-bg">
-                    <div class="mil-inner-banner">
-                        <div class="mi-invert-fix">
-                            <div class="mil-banner-content mil-up">
-                                <div class="mil-animation-frame">
-                                    <div class="mil-animation mil-position-4 mil-scale" data-value-1="6" data-value-2="1.4"></div>
-                                </div>
-                                <div class="container">
-                                    <ul class="mil-breadcrumbs mil-light mil-mb-60">
-                                        <li><a href="/">Home</a></li>
-                                        <li><a href="services.html">Services</a></li>
-                                    </ul>
-                                    <h1 class="mil-muted mil-mb-60">This <span class="mil-thin">is what we</span><br> do best</h1>
-                                    <a href="#services" class="mil-link mil-accent mil-arrow-place mil-down-arrow">
-                                        <span>Continue Reading</span>
-                                    </a>
+                    <!-- call to action -->
+                    <section class="mil-soft-bg" id="partnerships">
+                        <div class="container mil-p-120-120">
+                            <div class="row">
+                                <div class="col-lg-10">
+                                    <span
+                                        class="mil-suptitle mil-suptitle-right mil-suptitle-dark mil-up"
+                                        >We're here to help you<br />achieve
+                                        your greatest ambitions</span
+                                    >
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- banner end -->
-
-                    <!-- services -->
-                    <section id="services">
-                        <div class="mi-invert-fix">
-                            <div class="container mil-p-120-60">
-                                <div class="row">
-                                    <div class="col-lg-5">
-
-                                        <div class="mil-lines-place mil-light"></div>
-
-                                    </div>
-                                    <div class="col-lg-7">
-                                        <div class="row">
-                                            <div class="col-md-6 col-lg-6">
-                                                <div class="mil-service-card-lg mil-more mil-accent-cursor mil-offset">
-                                                    <h4 class="mil-muted mil-up mil-mb-30">Music Services</h4>
-                                                    <p class="mil-descr mil-light-soft mil-up mil-mb-30">We're a one-stop-shop for your sound. Whether you want to complete an entire project or get a custom beat. Our highly-skilled engineers got you!</p>
-                                                    <ul class="mil-service-list mil-light mil-mb-30">
-                                                        <li class="mil-up">Music Recording</li>
-                                                        <li class="mil-up">High-quality Mixing</li>
-                                                        <li class="mil-up">High-fidelity Mastering</li>
-                                                        <li class="mil-up">Music Production</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-lg-6">
-                                                <div class="mil-service-card-lg mil-more mil-accent-cursor">
-                                                    <h4 class="mil-muted mil-up mil-mb-30">Creative Development</h4>
-                                                    <p class="mil-descr mil-light-soft mil-up mil-mb-30">From the beginning, we believed in supporting our artists beyond recording sessions. With the expansion of our Artist Development Team, we can.</p>
-                                                    <ul class="mil-service-list mil-light mil-mb-30">
-                                                        <li class="mil-up">Songwriting Sessions</li>
-                                                        <li class="mil-up">Sound Critiques</li>
-                                                        <li class="mil-up">Project Sequencing</li>
-                                                        <li class="mil-up">Music Strategy</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-lg-6">
-                                                <div class="mil-service-card-lg mil-more mil-accent-cursor mil-offset">
-                                                    <h4 class="mil-muted mil-up mil-mb-30">Community Activations</h4>
-                                                    <p class="mil-descr mil-light-soft mil-up mil-mb-30">We're building a community for like-minded, ambitious creatives. Come to any of these events to meet our people.</p>
-                                                    <ul class="mil-service-list mil-light mil-mb-30">
-                                                        <li class="mil-up">Educational Sessions</li>
-                                                        <li class="mil-up">Networking Events</li>
-                                                        <li class="mil-up">Creative Collaborations</li>
-                                                        <li class="mil-up">Private Events</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-lg-6">
-                                                <div class="mil-service-card-lg mil-more mil-accent-cursor">
-                                                    <h4 class="mil-muted mil-up mil-mb-30">Brand Partnerships</h4>
-                                                    <p class="mil-descr mil-light-soft mil-up mil-mb-30">Each year, we work with a small cohort of artists who want to take it to the next level.</p>
-                                                    <ul class="mil-service-list mil-light mil-mb-30">
-                                                        <li class="mil-up">Brand Monetization</li>
-                                                        <li class="mil-up">Business Operations</li>
-                                                        <li class="mil-up">Long-term Strategy</li>
-                                                        <li class="mil-up">Creative Independence</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="mil-up book-now">
-                                                <a href="https://doublemstudios.as.me/" target="_blank" class="mil-button mil-arrow-place">
-                                                    <span>Book Your Session Today</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="mil-center">
+                                <h2 class="mil-up mil-mb-60">
+                                    We're the engine
+                                    <span class="mil-thin"
+                                        >that pushes you to</span
+                                    >
+                                    fulfill your potential. <br /><span
+                                        class="mil-thin"
+                                        >Are you interested in a</span
+                                    >
+                                    Partnership?
+                                </h2>
+                                <div class="mil-up">
+                                    <a
+                                        href="https://app.willotalent.com/common/d14162b9f47c46e6a13db8bc6b45a7c2"
+                                        target="_blank"
+                                        class="mil-button mil-arrow-place"
+                                        ><span
+                                            >Apply To Become A Partner</span
+                                        ></a
+                                    >
                                 </div>
                             </div>
                         </div>
                     </section>
+                    <!-- call to action end -->
+
+                    <!-- footer -->
+                    <div id="footer-container"></div>
+                    <!-- footer end -->
+
+                    <!-- hidden elements -->
+                    <div class="mil-hidden-elements">
+                        <div class="mil-dodecahedron">
+                            <div class="mil-pentagon">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="mil-pentagon">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="mil-pentagon">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="mil-pentagon">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="mil-pentagon">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="mil-pentagon">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="mil-pentagon">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="mil-pentagon">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="mil-pentagon">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="mil-pentagon">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="mil-pentagon">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="mil-pentagon">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            class="mil-arrow"
+                        >
+                            <path
+                                d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z"
+                            />
+                        </svg>
+
+                        <svg
+                            width="250"
+                            viewBox="0 0 300 1404"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="mil-lines"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M1 892L1 941H299V892C299 809.71 232.29 743 150 743C67.7096 743 1 809.71 1 892ZM0 942H300V892C300 809.157 232.843 742 150 742C67.1573 742 0 809.157 0 892L0 942Z"
+                                class="mil-move"
+                            />
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M299 146V97L1 97V146C1 228.29 67.7096 295 150 295C232.29 295 299 228.29 299 146ZM300 96L0 96V146C0 228.843 67.1573 296 150 296C232.843 296 300 228.843 300 146V96Z"
+                                class="mil-move"
+                            />
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M299 1H1V1403H299V1ZM0 0V1404H300V0H0Z"
+                            />
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M150 -4.37115e-08L150 1404L149 1404L149 0L150 -4.37115e-08Z"
+                            />
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M150 1324C232.29 1324 299 1257.29 299 1175C299 1092.71 232.29 1026 150 1026C67.7096 1026 1 1092.71 1 1175C1 1257.29 67.7096 1324 150 1324ZM150 1325C232.843 1325 300 1257.84 300 1175C300 1092.16 232.843 1025 150 1025C67.1573 1025 0 1092.16 0 1175C0 1257.84 67.1573 1325 150 1325Z"
+                                class="mil-move"
+                            />
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M300 1175H0V1174H300V1175Z"
+                                class="mil-move"
+                            />
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M150 678C232.29 678 299 611.29 299 529C299 446.71 232.29 380 150 380C67.7096 380 1 446.71 1 529C1 611.29 67.7096 678 150 678ZM150 679C232.843 679 300 611.843 300 529C300 446.157 232.843 379 150 379C67.1573 379 0 446.157 0 529C0 611.843 67.1573 679 150 679Z"
+                                class="mil-move"
+                            />
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M299 380H1V678H299V380ZM0 379V679H300V379H0Z"
+                                class="mil-move"
+                            />
+                        </svg>
+                    </div>
+                    <!-- hidden elements end -->
                 </div>
-                <!-- services end -->
-
-                <!-- call to action -->
-                <section class="mil-soft-bg" id="partnerships">
-                    <div class="container mil-p-120-120">
-                        <div class="row">
-                            <div class="col-lg-10">
-
-                                <span class="mil-suptitle mil-suptitle-right mil-suptitle-dark mil-up">We're here to help you<br>achieve your greatest ambitions</span>
-
-                            </div>
-                        </div>
-                        <div class="mil-center">
-                            <h2 class="mil-up mil-mb-60">We're the engine <span class="mil-thin">that pushes you to</span> fulfill your potential. <br><span class="mil-thin">Are you interested in a</span> Partnership?</h2>
-                            <div class="mil-up"><a href="https://app.willotalent.com/common/d14162b9f47c46e6a13db8bc6b45a7c2" target="_blank" class="mil-button mil-arrow-place"><span>Apply To Become A Partner</span></a></div>
-                        </div>
-                    </div>
-                </section>
-                <!-- call to action end -->
-
-                <!-- footer -->
-                <footer class="mil-dark-bg">
-                    <div class="mi-invert-fix">
-                        <div class="container mil-p-120-60">
-                            <div class="row justify-content-between">
-                                <div class="col-md-4 col-lg-4 mil-mb-60">
-
-                                    <div class="mil-muted mil-logo mil-up mil-mb-30">Double M Studios</div>
-
-                                    <div class="mil-up mil-light-soft mil-mb-30">Subscribe to Our Newsletter</div>
-
-                                    <div style="min-height: 58px; max-width: 440px;width: 100%;"><script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.1/umd/signup-form.min.js" data-button-color="#F8C729" data-button-text-color="#000000" data-site="https://blog.doublemstudios.com/" async></script></div>
-
-                                </div>
-                                <div class="col-md-7 col-lg-6">
-                                    <div class="row justify-content-end">
-                                        <div class="col-md-6 col-lg-7">
-
-                                            <nav class="mil-footer-menu mil-mb-60">
-                                                <ul>
-                                                    <li class="mil-up">
-                                                        <a href="/">Home</a>
-                                                    </li>
-                                                    <li class="mil-up mil-active">
-                                                        <a href="services.html">Services</a>
-                                                    </li>
-                                                    <li class="mil-up">
-                                                        <a href="contact.html">Contact</a>
-                                                    </li>
-                                                    <li class="mil-up">
-                                                        <a href="https://blog.doublemstudios.com/" target="_blank">Blog</a>
-                                                    </li>
-                                                </ul>
-                                            </nav>
-
-                                        </div>
-                                        <div class="col-md-6 col-lg-5">
-
-                                            <ul class="mil-menu-list mil-up mil-mb-60">
-                                                <li><a href="legal.html" class="mil-light-soft">Privacy Policy</a></li>
-                                                <li><a href="legal.html" class="mil-light-soft">Terms & Conditions</a></li>
-                                                <li><a href="legal.html" class="mil-light-soft">Cookie Policy</a></li>
-                                            </ul>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row justify-content-between flex-sm-row-reverse">
-                                <div class="col-md-7 col-lg-6">
-                                    <div class="row justify-content-between">
-                                        <div class="col-md-6 col-lg-5 mil-mb-60">
-                                            <h6 class="mil-muted mil-up mil-mb-30">Studio Info</h6>
-                                            <p class="mil-light-soft mil-up">Daily: 11am - 3am</p>
-                                            <br>
-                                            <p class="mil-light-soft mil-up">966 Hungerford Drive 19B, Rockville, MD 20850</p>
-                                            <br>
-                                            <p class="mil-light-soft mil-up">+1 301 531 4315</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-lg-6 mil-mb-60">
-
-                                    <div class="mil-vert-between">
-                                        <div class="mil-mb-30">
-                                            <ul class="mil-social-icons mil-up">
-                                                <li><a href="https://www.instagram.com/doublemstudios_" target="_blank" class="social-icon"> <i class="fab fa-instagram"></i></a></li>
-                                                <li><a href="https://www.youtube.com/@doublemstudios_" target="_blank" class="social-icon"> <i class="fab fa-youtube"></i></a></li>
-                                                <li><a href="https://www.linkedin.com/company/double-m-studios" target="_blank" class="social-icon"> <i class="fab fa-linkedin"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <p class="mil-light-soft mil-up copyright">
-                                            <span>Double M Studios
-                                            &copy; <script>document.querySelector(".copyright span").innerHTML += new Date().getFullYear();</script></a></span>
-                                        </p>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-                <!-- footer end -->
-
-                <!-- hidden elements -->
-                <div class="mil-hidden-elements">
-                    <div class="mil-dodecahedron">
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="mil-arrow">
-                        <path d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z" />
-                    </svg>
-
-                    <svg width="250" viewBox="0 0 300 1404" fill="none" xmlns="http://www.w3.org/2000/svg" class="mil-lines">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1 892L1 941H299V892C299 809.71 232.29 743 150 743C67.7096 743 1 809.71 1 892ZM0 942H300V892C300 809.157 232.843 742 150 742C67.1573 742 0 809.157 0 892L0 942Z" class="mil-move" />
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M299 146V97L1 97V146C1 228.29 67.7096 295 150 295C232.29 295 299 228.29 299 146ZM300 96L0 96V146C0 228.843 67.1573 296 150 296C232.843 296 300 228.843 300 146V96Z" class="mil-move" />
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M299 1H1V1403H299V1ZM0 0V1404H300V0H0Z" />
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M150 -4.37115e-08L150 1404L149 1404L149 0L150 -4.37115e-08Z" />
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M150 1324C232.29 1324 299 1257.29 299 1175C299 1092.71 232.29 1026 150 1026C67.7096 1026 1 1092.71 1 1175C1 1257.29 67.7096 1324 150 1324ZM150 1325C232.843 1325 300 1257.84 300 1175C300 1092.16 232.843 1025 150 1025C67.1573 1025 0 1092.16 0 1175C0 1257.84 67.1573 1325 150 1325Z" class="mil-move" />
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M300 1175H0V1174H300V1175Z" class="mil-move" />
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M150 678C232.29 678 299 611.29 299 529C299 446.71 232.29 380 150 380C67.7096 380 1 446.71 1 529C1 611.29 67.7096 678 150 678ZM150 679C232.843 679 300 611.843 300 529C300 446.157 232.843 379 150 379C67.1573 379 0 446.157 0 529C0 611.843 67.1573 679 150 679Z" class="mil-move" />
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M299 380H1V678H299V380ZM0 379V679H300V379H0Z" class="mil-move" />
-                    </svg>
-                </div>
-                <!-- hidden elements end -->
-
             </div>
+            <!-- content -->
         </div>
-        <!-- content -->
-    </div>
-    <!-- wrapper end -->
+        <!-- wrapper end -->
 
-    <!-- jQuery js -->
-    <script src="js/plugins/jquery.min.js"></script>
-    <!-- swup js -->
-    <script src="js/plugins/swup.min.js"></script>
-    <!-- swiper js -->
-    <script src="js/plugins/swiper.min.js"></script>
-    <!-- fancybox js -->
-    <script src="js/plugins/fancybox.min.js"></script>
-    <!-- gsap js -->
-    <script src="js/plugins/gsap.min.js"></script>
-    <!-- scroll smoother -->
-    <script src="js/plugins/smooth-scroll.js"></script>
-    <!-- scroll trigger js -->
-    <script src="js/plugins/ScrollTrigger.min.js"></script>
-    <!-- scroll to js -->
-    <script src="js/plugins/ScrollTo.min.js"></script>
-    <!-- main js -->
-    <script src="js/main.js"></script>
-
-</body>
-
+        <!-- jQuery js -->
+        <script src="js/plugins/jquery.min.js"></script>
+        <!-- swup js -->
+        <script src="js/plugins/swup.min.js"></script>
+        <!-- swiper js -->
+        <script src="js/plugins/swiper.min.js"></script>
+        <!-- fancybox js -->
+        <script src="js/plugins/fancybox.min.js"></script>
+        <!-- gsap js -->
+        <script src="js/plugins/gsap.min.js"></script>
+        <!-- scroll smoother -->
+        <script src="js/plugins/smooth-scroll.js"></script>
+        <!-- scroll trigger js -->
+        <script src="js/plugins/ScrollTrigger.min.js"></script>
+        <!-- scroll to js -->
+        <script src="js/plugins/ScrollTo.min.js"></script>
+        <!-- main js -->
+        <script src="js/main.js"></script>
+        <!-- navbar js -->
+        <script src="js/nav.js"></script>
+        <!-- footer js -->
+        <script src="js/footer.js"></script>
+    </body>
 </html>
