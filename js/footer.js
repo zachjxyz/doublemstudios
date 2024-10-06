@@ -1,6 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
   const footerContainer = document.getElementById("footer-container");
 
+  const inlineStyles = `
+      <style>
+          .mil-light-soft {
+              opacity: 1 !important;
+              visibility: visible !important;
+          }
+          .mil-menu-list a {
+              color: inherit !important;
+          }
+      </style>
+  `;
+
   const footerStructure = {
     companyName: "Double M Studios",
     newsletterText: "Subscribe to Our Newsletter",
@@ -94,9 +106,12 @@ document.addEventListener("DOMContentLoaded", function () {
                                     </nav>
                                 </div>
                                 <div class="col-md-6 col-lg-5">
-                                    <ul class="mil-menu-list mil-up mil-mb-60">
-                                        ${generateMenu(footerStructure.legalMenu)}
-                                    </ul>
+                                <h6 class="mil-muted mil-mb-30">Legal Stuff</h6>
+                                <ul class="mil-menu-list">
+                                    <li><a href="legal.html" class="mil-light-soft">Privacy Policy</a></li>
+                                    <li><a href="legal.html" class="mil-light-soft">Terms & Conditions</a></li>
+                                    <li><a href="legal.html" class="mil-light-soft">Cookie Policy</a></li>
+                                </ul>
                                 </div>
                             </div>
                         </div>
