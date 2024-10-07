@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     mainMenu: [
       {
         text: "Home",
-        url: "index.html",
+        url: "/",
         active: true,
       },
       {
@@ -43,11 +43,10 @@ document.addEventListener("DOMContentLoaded", function () {
             url: "https://discord.gg/sx43dbus3x",
             target: "_blank",
           },
-          { text: "Meet Our Team", url: "team.html" },
+          { text: "Meet Our Team", url: "team" },
           {
             text: "Read Our Blog",
-            url: "https://blog.doublemstudios.com/",
-            target: "_blank",
+            url: "https://doublemstudios.com/blog",
           },
         ],
       },
@@ -57,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
         children: [
           {
             text: "Contact Us",
-            url: "contact.html",
+            url: "contact",
             target: "_blank",
             class: "mil-light-soft",
           },
@@ -94,12 +93,12 @@ document.addEventListener("DOMContentLoaded", function () {
       { text: "Community Activations", url: "#" },
       { text: "Omega Recording Studios", url: "#" },
       { text: "Twin Valley Distillers", url: "#" },
-      { text: "Montgomery County Public Schools", url: "yea.html" },
+      { text: "Montgomery County Public Schools", url: "yea" },
     ],
     legal: [
-      { text: "Privacy Policy", url: "legal.html" },
-      { text: "Terms & Conditions", url: "legal.html" },
-      { text: "Cookie Policy", url: "legal.html" },
+      { text: "Privacy Policy", url: "legal" },
+      { text: "Terms & Conditions", url: "legal" },
+      { text: "Cookie Policy", url: "legal" },
     ],
     studioInfo: {
       hours: "Daily: 11am - 3am",
@@ -148,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const navHTML = `
         <div class="mil-menu-frame">
             <div class="mil-frame-top">
-                <a href="index.html" class="mil-logo">${navStructure.logo}</a>
+                <a href="/" class="mil-logo">${navStructure.logo}</a>
                 <div class="mil-menu-btn">
                     <span></span>
                 </div>

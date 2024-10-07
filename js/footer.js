@@ -19,19 +19,18 @@ document.addEventListener("DOMContentLoaded", function () {
     newsletterScript:
       "https://cdn.jsdelivr.net/ghost/signup-form@~0.1/umd/signup-form.min.js",
     mainMenu: [
-      { text: "Home", url: "index.html", active: true },
-      { text: "Services", url: "services.html" },
-      { text: "Contact", url: "contact.html" },
+      { text: "Home", url: "/", active: true },
+      { text: "Services", url: "services" },
+      { text: "Contact", url: "contact" },
       {
         text: "Blog",
-        url: "https://blog.doublemstudios.com/",
-        target: "_blank",
+        url: "https://doublemstudios.com/blog",
       },
     ],
     legalMenu: [
-      { text: "Privacy Policy", url: "legal.html" },
-      { text: "Terms & Conditions", url: "legal.html" },
-      { text: "Cookie Policy", url: "legal.html" },
+      { text: "Privacy Policy", url: "legal" },
+      { text: "Terms & Conditions", url: "legal" },
+      { text: "Cookie Policy", url: "legal" },
     ],
     studioInfo: {
       hours: "Daily: 11am - 3am",
@@ -108,9 +107,9 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <div class="col-md-6 col-lg-5">
                                 <h6 class="mil-muted mil-mb-30">Legal Stuff</h6>
                                 <ul class="mil-menu-list">
-                                    <li><a href="legal.html" class="mil-light-soft">Privacy Policy</a></li>
-                                    <li><a href="legal.html" class="mil-light-soft">Terms & Conditions</a></li>
-                                    <li><a href="legal.html" class="mil-light-soft">Cookie Policy</a></li>
+                                    <li><a href="legal" class="mil-light-soft">Privacy Policy</a></li>
+                                    <li><a href="legal" class="mil-light-soft">Terms & Conditions</a></li>
+                                    <li><a href="legal" class="mil-light-soft">Cookie Policy</a></li>
                                 </ul>
                                 </div>
                             </div>
