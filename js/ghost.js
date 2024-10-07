@@ -8,7 +8,7 @@ api.posts
   .browse({
     limit: 2,
     include: "tags, authors",
-    filter: "tags:newsletter",
+    filter: "tags:[newsletter,engineering,artist-development,business]",
   })
   .then((obj) => {
     let posts = obj.reverse();
