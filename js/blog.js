@@ -6,11 +6,12 @@ const api = new GhostContentAPI({
 
 api.posts
   .browse({
-    limit: 5,
     include: "tags, authors",
     filter: "tags:[engineering,artist-development,business]",
   })
   .then((obj) => {
+    let posts = obj.reverse();
+
     featured_posts = document.getElementById("featured-posts");
     blog_posts = document.getElementById("blog-posts");
 
