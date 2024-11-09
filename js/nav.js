@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
           },
           {
             text: "Become a Member",
-            url: "https://app.acuityscheduling.com/catalog.php?owner=22352524&category=Gold+Member",
+            url: "https://app.acuityscheduling.com/catalog.php?owner=22352524&action=addCart&clear=1&id=1663395",
             target: "_blank",
           },
           {
