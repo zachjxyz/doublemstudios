@@ -9,10 +9,9 @@ api.posts
     limit: 2,
     include: "tags, authors",
     filter: "tags:[newsletter,engineering,artist-development,business]",
+    order: "published_at DESC",
   })
   .then((obj) => {
-    let posts = obj.reverse();
-
     blog_posts = document.getElementById("post-content");
 
     obj.forEach((post) => {
