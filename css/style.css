@@ -3471,12 +3471,16 @@ Price Section Scoped to #memberships
 
 #memberships .memberships-header {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 /* Center-align header text */
 #memberships p {
   text-align: center;
+  margin-bottom: 20px;
+}
+
+#memberships .col-md-4 {
   margin-bottom: 20px;
 }
 
@@ -3499,7 +3503,6 @@ Price Section Scoped to #memberships
 
 /* Hover effect for cards */
 #memberships .mil-card:hover {
-  transform: translateY(-10px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
@@ -3540,8 +3543,12 @@ Price Section Scoped to #memberships
   content: '✓ ';
 }
 
-#memberships .mil-list li.no:before{
+#memberships .mil-list li.no:before {
   content: '× ';
+}
+
+#memberships .mil-list li.list-benefits:before {
+  content: '';
 }
 
 #memberships .mil-up {
