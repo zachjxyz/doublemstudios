@@ -10,45 +10,18 @@ document.addEventListener("DOMContentLoaded", function () {
         active: true,
       },
       {
-        text: "Services",
-        url: "#.",
-        children: [
-          {
-            text: "Book A Recording Session",
-            url: "https://doublemstudios.as.me/",
-            target: "_blank",
-          },
-          {
-            text: "Become a Member",
-            url: "https://app.acuityscheduling.com/catalog.php?owner=22352524&action=addCart&clear=1&id=1663395",
-            target: "_blank",
-          },
-          {
-            text: "Get Your Songs Mixed",
-            url: "https://doublemstudios.as.me/?appointmentType=category:Mixes",
-            target: "_blank",
-          },
-          {
-            text: "Book A Private Event",
-            url: "https://doublemstudios.as.me/private-events",
-          },
-        ],
+        text: "Blog",
+        url: "https://doublemstudios.com/blog",
       },
       {
-        text: "Community",
-        url: "#.",
-        children: [
-          {
-            text: "Join Our Discord",
-            url: "https://discord.gg/sx43dbus3x",
-            target: "_blank",
-          },
-          { text: "Meet Our Team", url: "team" },
-          {
-            text: "Read Our Blog",
-            url: "https://doublemstudios.com/blog",
-          },
-        ],
+        text: "Book A Session",
+        url: "https://doublemstudios.as.me/",
+        target: "_blank",
+      },
+      {
+        text: "Discord",
+        url: "https://discord.gg/sx43dbus3x",
+        target: "_blank",
       },
       {
         text: "Studio Info",
@@ -78,14 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
             target: "_blank",
             class: "mil-light-soft",
           },
-        ],
-      },
-      {
-        text: "Login",
-        url: "#.",
-        children: [
-          { text: "Login", url: "#" },
-          { text: "Sign-up", url: "#" },
         ],
       },
     ],

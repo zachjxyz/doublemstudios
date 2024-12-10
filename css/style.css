@@ -3462,26 +3462,105 @@ accordion
 }
 
 /***************************
-
-price
-
+Price Section Scoped to #memberships
 ***************************/
-.mil-price-card {
-  display: block;
-  width: 100%;
-  border-top: solid 1px rgba(255, 255, 255, 0.1);
-  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
-  padding: 60px 0 30px;
+
+#memberships .row {
+  margin-bottom: 20px;
 }
-.mil-price-card .mil-price-number {
-  padding-top: 10px;
-  line-height: 70%;
-  font-size: 54px;
-  font-weight: 500;
+
+#memberships .memberships-header {
+  display: flex;
+  justify-content: space-evenly;
 }
-.mil-price-card .mil-price-number .mil-thin {
-  font-weight: 200;
-  font-size: 18px;
+
+/* Center-align header text */
+#memberships p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Pricing card styles */
+#memberships .mil-card {
+  height: 100%; /* Equal height for all cards */
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Highlighted card for emphasis */
+#memberships .mil-card-highlighted {
+  border: 2px solid #F8C729;
+  background: #fff7e0; /* Light variation of the brand color */
+}
+
+/* Hover effect for cards */
+#memberships .mil-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Tier name styling (one line) */
+#memberships .mil-tier-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  white-space: nowrap; /* Prevent line break */
+}
+
+/* Pricing styling */
+#memberships .mil-price {
+  font-size: 28px;
+  color: #000; /* Black color for pricing */
+  margin: 0 0 20px 0; /* Separate from tier name */
+}
+
+/* List of features */
+#memberships .mil-list {
+  list-style: none;
+  margin: 20px 0;
+  text-align: left; /* Align text to the left */
+}
+
+#memberships .mil-list li {
+  margin: 10px 0; /* Spacing between list items */
+  font-size: 16px;
+  color: #555;
+  padding-left: 25px; /* Indentation for alignment */
+}
+
+#memberships .mil-list li:before {
+  content: '✓ ';
+}
+
+#memberships .mil-list li.no:before{
+  content: '× ';
+}
+
+#memberships .mil-up {
+  display: flex;
+}
+
+/* Button styling */
+#memberships .mil-button {
+  display: inline-flex;/* Ensure it spans the full width */
+  justify-content: center;
+  margin: 20px auto 0 auto; /* Center the button horizontally */
+  transition: background 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  #memberships .mil-card {
+    margin: 0 auto; /* Center cards */
+  }
 }
 
 /***************************
