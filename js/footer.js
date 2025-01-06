@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     ],
     legalMenu: [
-      { text: "Privacy Policy", url: "legal" },
+      { text: "Privacy Policy", url: "privacy-policy" },
       { text: "Terms & Conditions", url: "legal" },
       { text: "Cookie Policy", url: "legal" },
     ],
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <div class="col-md-6 col-lg-5">
                                 <h6 class="mil-muted mil-mb-30">Legal Stuff</h6>
                                 <ul class="mil-menu-list">
-                                    <li><a href="legal" class="mil-light-soft">Privacy Policy</a></li>
+                                    <li><a href="privacy-policy" class="mil-light-soft">Privacy Policy</a></li>
                                     <li><a href="legal" class="mil-light-soft">Terms & Conditions</a></li>
                                     <li><a href="legal" class="mil-light-soft">Cookie Policy</a></li>
                                 </ul>
